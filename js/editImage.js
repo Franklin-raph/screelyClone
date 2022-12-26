@@ -1,7 +1,9 @@
-// import { toJpeg } from 'html-to-image.js';
 const imageFrame = document.querySelector(".imageFrame");
 const imageDownloadButton = document.querySelector('.downloadImage')
-
+const horizontalSlider = document.querySelector('.horizontalSlider')
+const verticalSlider = document.querySelector('.verticalSlider')
+const verticalSliderNum = document.querySelector('.verticalSliderNum')
+const horizontalSliderNum = document.querySelector('.horizontalSliderNum')
 
 document.addEventListener('DOMContentLoaded', (e) => {
 const imgUrl = localStorage.getItem('image')
@@ -80,3 +82,15 @@ imageDownloadButton.addEventListener('click', ()=>{
             anchorTag.click();
         });
 })
+
+horizontalSlider.oninput = function() {
+    imageFrame.style.paddingRight = this.value + "px";
+    imageFrame.style.paddingLeft = this.value + "px";
+    horizontalSliderNum.textContent = this.value + "px"
+}
+
+verticalSlider.oninput = function() {
+    imageFrame.style.paddingTop = this.value + "px";
+    imageFrame.style.paddingBottom = this.value + "px";
+    verticalSliderNum.textContent = this.value + "px"
+}

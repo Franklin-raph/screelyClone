@@ -33,13 +33,27 @@
             </div>
             <div class="padding">
                 <h3>Padding</h3>
+                <div class="vertical">
+                    <p>Vertical</p>
+                    <div class="sliderAndValue">
+                        <input type="range" max="150" min="0" value="50" class="verticalSlider">
+                        <p class="verticalSliderNum">50px</p>
+                    </div>
+                </div>
+                <div class="horizontal">
+                    <p>Horizontal</p>
+                    <div class="sliderAndValue">
+                        <input type="range" max="150" min="0" value="50" class="horizontalSlider">
+                        <p class="horizontalSliderNum">50px</p>
+                    </div>
+                </div>
             </div>
-            <button class="downloadImage">Download</button>
+            <button class="downloadImage">Download </button>
         </div>
     </div>
-    <div id="previewImg"></div>
+    
 
-    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="/js/pickr.js"></script>
     <script src="/js/html2canvas.js" type="module"></script>
     <script src="/js/editImage.js"></script>
 </body>

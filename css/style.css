@@ -199,4 +199,22 @@ input[type="file"] {
 
 .padding{
     margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.vertical, .horizontal{
+    margin-bottom: 10px;
+}
+
+.sliderAndValue{
+    display: flex;
+    gap: 15px;
+}
+
+.downloadImage{
+    all: unset;
+    background-color: #27C93F;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
