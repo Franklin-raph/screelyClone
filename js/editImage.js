@@ -1,4 +1,7 @@
+// import { toJpeg } from 'html-to-image.js';
 const imageFrame = document.querySelector(".imageFrame");
+const imageDownloadButton = document.querySelector('.downloadImage')
+
 
 document.addEventListener('DOMContentLoaded', (e) => {
 const imgUrl = localStorage.getItem('image')
@@ -62,3 +65,18 @@ pickr.on('change', (...args) => {
     let color = args[0].toRGBA()
     imageFrame.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`;
 });
+
+
+imageDownloadButton.addEventListener('click', ()=>{
+    html2canvas(document.querySelector(".imageFrame"),
+        {
+            allowTaint: true,
+            useCORS: true
+        }).then(function (canvas) {
+            let anchorTag = document.createElement("a");
+            anchorTag.download = "filename.png";
+            anchorTag.href = canvas.toDataURL();
+            anchorTag.target = '_blank';
+            anchorTag.click();
+        });
+})
