@@ -4,6 +4,7 @@ const horizontalSlider = document.querySelector('.horizontalSlider')
 const verticalSlider = document.querySelector('.verticalSlider')
 const verticalSliderNum = document.querySelector('.verticalSliderNum')
 const horizontalSliderNum = document.querySelector('.horizontalSliderNum')
+const topBar = document.querySelector(".topBar")
 
 document.addEventListener('DOMContentLoaded', (e) => {
 const imgUrl = localStorage.getItem('image')
@@ -93,4 +94,8 @@ verticalSlider.oninput = function() {
     imageFrame.style.paddingTop = this.value + "px";
     imageFrame.style.paddingBottom = this.value + "px";
     verticalSliderNum.textContent = this.value + "px"
+}
+
+function toggleMode(){
+    topBar.classList.toggle("dark")
 }
