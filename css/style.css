@@ -233,3 +233,12 @@ input[type="file"] {
 .dark{
     background-color: #2F3542;
 }
+
+#EditorPageNav .navLinks{
+    align-items: center;
+    gap: 5px;
+}
+
+.ph-moon{
+    cursor: pointer;
+}
