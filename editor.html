@@ -19,10 +19,12 @@
     <div class="editingSpace">
         <div class="left">
             <div class="imageFrame">
-                <div class="topBar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="imgandbar">
+                    <div class="topBar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,6 +33,9 @@
                 <div class="text">
                     <h3>Window</h3>
                     <div class="icons">
+                        <i class="ph-selection-background" onclick="toggleShadow()">
+                            <span class="tooltiptext">Toggle image shadow</span>
+                        </i>
                         <i class="ph-moon" onclick="toggleMode()"></i>
                     </div>
                 </div>
@@ -57,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <button class="downloadImage">Download </button>
+            <button class="downloadImage">Download <i class="ph-download-simple"></i> </button>
         </div>
     </div>
     

@@ -5,18 +5,24 @@ const verticalSlider = document.querySelector('.verticalSlider')
 const verticalSliderNum = document.querySelector('.verticalSliderNum')
 const horizontalSliderNum = document.querySelector('.horizontalSliderNum')
 const topBar = document.querySelector(".topBar")
+const imgandbar = document.querySelector(".imgandbar")
 
 document.addEventListener('DOMContentLoaded', (e) => {
-const imgUrl = localStorage.getItem('image')
 
-const img = new Image();
-img.src = imgUrl;
-imageFrame.appendChild(img)
+    const imgUrl = localStorage.getItem('image')
+
+    const img = new Image();
+    img.src = imgUrl;
+    imgandbar.appendChild(img)
 });
 
+function toggleShadow(){
+    imgandbar.classList.toggle("box-shadow")
+}
 
 function clrStorage(){
     localStorage.removeItem('image')
+    location.reload()
 }
 
 

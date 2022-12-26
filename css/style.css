@@ -234,11 +234,43 @@ input[type="file"] {
     background-color: #2F3542;
 }
 
+.box-shadow{
+    box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 10px 22px rgb(0 0 0 / 20%);
+}
+
 #EditorPageNav .navLinks{
     align-items: center;
     gap: 5px;
 }
 
-.ph-moon{
+.ph-moon, .ph-selection-background{
+    font-size: 18px;
+    margin: 0 5px;
     cursor: pointer;
 }
+
+.ph-moon, .ph-selection-background {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .ph-selection-background .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    font-size: 12px;
+  }
+  
+  .ph-selection-background:hover .tooltiptext {
+    visibility: visible;
+  }
