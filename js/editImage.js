@@ -6,9 +6,22 @@ const verticalSliderNum = document.querySelector('.verticalSliderNum')
 const horizontalSliderNum = document.querySelector('.horizontalSliderNum')
 const topBar = document.querySelector(".topBar")
 const imgandbar = document.querySelector(".imgandbar")
-const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{
-    location.reload()
+const windowTypeAndStyleNav = document.querySelector('.windowTypeAndStyleNav')
+const windowOverLay = document.querySelector('.windowOverLay')
+
+document.querySelector('.noWindow').addEventListener('click', () => {topBar.style.display = "none"})
+
+document.querySelector('.plainWindow').addEventListener('click', () => {
+    topBar.style.display = "flex"
+    document.querySelector('.browserBar').style.display = "none"
 })
+
+document.querySelector('.browserWindow').addEventListener('click', () => {
+    topBar.style.display = "flex"
+    document.querySelector('.browserBar').style.display = "block"
+})
+
+const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{location.reload()})
 
 document.addEventListener('DOMContentLoaded', (e) => {
 
@@ -27,7 +40,6 @@ function clrStorage(){
     localStorage.removeItem('image')
     location.reload(true)
 }
-
 
 // Simple example, see optional options for more configuration.
 const pickr = Pickr.create({
@@ -134,3 +146,13 @@ tabButtons.forEach((header, index) => {
         tabColors[index].classList.add('active')
     })
 })
+
+function openNav(){
+    windowTypeAndStyleNav.style.right = "0"
+    windowOverLay.style.display = 'block'
+}
+
+function closeNav(){
+    windowTypeAndStyleNav.style.right = "-400px"
+    windowOverLay.style.display = 'none'
+}

@@ -24,14 +24,40 @@
                         <span></span>
                         <span></span>
                         <span></span>
+                        <span class="browserBar"></span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="right">
+            <div class="windowOverLay">
+                <div class="windowTypeAndStyleNav">
+                    <i class="ph-x" onclick="closeNav()"></i>
+                    <div class="windowType">
+                        <div class="windowTypeBtn">
+                            <p>Window Type</p>
+                            <i class="ph-caret-down"></i>
+                        </div>
+                        <div class="windowTypeBtns">
+                            <button class="noWindow">No Window</button>
+                            <button class="plainWindow">Plain Window</button>
+                            <button class="browserWindow">Browser Window</button>
+                        </div>
+                    </div>
+                    <div class="windowStyle">
+                        <div class="windowStylyeBtn">
+                            <p>Window Style</p>
+                            <i class="ph-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="window">
                 <div class="text">
-                    <h3>Window</h3>
+                    <div class="windowNav">
+                        <h3>Window</h3>
+                        <i class="ph-caret-right" onclick="openNav()"></i>
+                    </div>
                     <div class="icons">
                         <i class="ph-selection-background" onclick="toggleShadow()">
                             <span class="tooltiptext">Toggle image shadow</span>

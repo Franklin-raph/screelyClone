@@ -8,6 +8,12 @@
     font-family:'Rubik', sans-serif;;
 }
 
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+    /* position: relative; */
+}
+
 a{
     text-decoration: none;
 }
@@ -99,8 +105,17 @@ button{
     background-color: #FFBD2E;
 }
 
-.topBar span:last-child{
+.topBar span:nth-child(3){
     background-color: #27C93F;
+}
+
+.browserBar{
+    background-color: #fff;
+    height: 20px !important;
+    width: 80% !important;
+    border-radius: 4px !important;
+    margin-left: 15px;
+    display: none;
 }
 
 .bottomBox{
@@ -164,7 +179,7 @@ input[type="file"] {
     flex-direction: column;
     background-color: #c90b34;;
     padding: 40px;
-    width: 40%;
+    width: 80%; /* formely: 40%; */
     box-sizing: border-box;
     margin: 7rem auto 2rem;
     /* height: 70%; */
@@ -200,7 +215,7 @@ input[type="file"] {
 .right{
     background-color: #2F3542;
     height: 100vh;
-    padding: 20px;
+    /* padding: 20px; */
     color: #fff;
 }
 
@@ -344,6 +359,12 @@ input[type="file"] {
     display: grid;
   }
 
+  .colorSection{
+    border-top: 1px solid rgb(148, 148, 148);
+    border-bottom: 1px solid rgb(148, 148, 148);
+    padding: 12px 0 18px;
+  }
+
   .g-1{
     background: linear-gradient(45deg, rgb(128, 152, 249) 0%, rgb(164, 188, 253) 100%);
   }
@@ -422,4 +443,73 @@ input[type="file"] {
 
   .g-20{
     background: linear-gradient(45deg, rgb(138, 35, 135) 0%, rgb(233, 64, 87) 50%, rgb(242, 113, 33) 100%);
+  }
+
+  .windowNav{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .ph-caret-right{
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .windowTypeAndStyleNav{
+    position: relative;
+    background-color: #2F3542;
+    padding: 12px;
+    right: -400px;
+}
+
+.windowOverLay{
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.705);
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    transition: .5s;
+  }
+
+  .windowType{
+    margin-bottom: 30px;
+    margin-top: 3rem;
+  }
+
+  .windowType, .windowStyle{
+    cursor: pointer;
+  }
+
+  .ph-x{
+    position: absolute;
+    z-index: 9999;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    right: 77%;
+  }
+
+  .window, .colorSection, .padding{
+    padding: 20px;
+  }
+
+  .downloadImage{
+    margin: 20px;
+  }
+
+  .windowStylyeBtn, .windowTypeBtn{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .windowTypeBtn i, .windowStylyeBtn i{
+    font-size: 18px;
+  }
+
+  .windowTypeBtns button{
+    display: block;
+    margin: 8px 0;
   }
