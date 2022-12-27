@@ -6,6 +6,9 @@ const verticalSliderNum = document.querySelector('.verticalSliderNum')
 const horizontalSliderNum = document.querySelector('.horizontalSliderNum')
 const topBar = document.querySelector(".topBar")
 const imgandbar = document.querySelector(".imgandbar")
+const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{
+    location.reload()
+})
 
 document.addEventListener('DOMContentLoaded', (e) => {
 
@@ -72,7 +75,6 @@ const pickr = Pickr.create({
 
 pickr.on('change', (...args) => {
     let color = args[0].toRGBA()
-    console.log(color)
     imageFrame.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`;
 });
 
