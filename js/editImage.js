@@ -22,14 +22,14 @@ function toggleShadow(){
 
 function clrStorage(){
     localStorage.removeItem('image')
-    location.reload()
+    location.reload(true)
 }
 
 
 // Simple example, see optional options for more configuration.
 const pickr = Pickr.create({
     el: '.color-picker',
-    theme: 'monolith', // or 'monolith', or 'nano'
+    theme: 'monolith', // or 'monolith', or 'nano' or 'classic'
     default: '#C90B34',
 
     swatches: [
@@ -72,6 +72,7 @@ const pickr = Pickr.create({
 
 pickr.on('change', (...args) => {
     let color = args[0].toRGBA()
+    console.log(color)
     imageFrame.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`;
 });
 
@@ -105,3 +106,29 @@ verticalSlider.oninput = function() {
 function toggleMode(){
     topBar.classList.toggle("dark")
 }
+
+const tabButtons = document.querySelectorAll('.backgroundTab button');
+const tabColors = document.querySelectorAll('.tabColor')
+
+const gradientColorsDivs = document.querySelectorAll(".gradientColors div")
+console.log(tabButtons)
+
+gradientColorsDivs.forEach(gradientColor => {
+    gradientColor.addEventListener('click', () => {
+        imageFrame.style.background = window.getComputedStyle(gradientColor).background
+
+    })
+})
+
+tabButtons.forEach((header, index) => {
+    header.addEventListener('click', () => {
+        tabColors.forEach(tabColor => {
+            tabColor.classList.remove('active')
+        });
+        tabButtons.forEach(headerTab => {
+            headerTab.classList.remove('active')
+        });
+        tabButtons[index].classList.add('active')
+        tabColors[index].classList.add('active')
+    })
+})
