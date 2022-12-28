@@ -179,7 +179,7 @@ input[type="file"] {
     flex-direction: column;
     background-color: #c90b34;;
     padding: 40px;
-    width: 80%; /* formely: 40%; */
+    width: 40%; /* formely: 40%; */
     box-sizing: border-box;
     margin: 7rem auto 2rem;
     /* height: 70%; */

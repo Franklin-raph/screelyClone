@@ -11,6 +11,10 @@ const windowOverLay = document.querySelector('.windowOverLay')
 const windowTypeBtns = document.querySelectorAll(".windowTypeBtns button")
 const windowStyleBtns = document.querySelectorAll(".windowStyleBtns button")
 
+document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
+    document.querySelector('.windowTypeBtns').classList.toggle('hide')
+})
+
 document.querySelector('.noWindow').addEventListener('click', () => {topBar.style.display = "none"})
 
 document.querySelector('.plainWindow').addEventListener('click', () => {
@@ -23,13 +27,12 @@ document.querySelector('.browserWindow').addEventListener('click', () => {
     document.querySelector('.browserBar').style.display = "block"
 })
 
-document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
-    document.querySelector('.windowTypeBtns').classList.toggle('hide')
-})
 
 document.querySelector('.windowStylyeBtn').addEventListener("click", ()=>{
     document.querySelector('.windowStyleBtns').classList.toggle('hide')
 })
+
+document.querySelector('.none').addEventListener('click', () => {topBar.style.display = "none"})
 
 windowTypeBtns.forEach((windontypeBtn, index) => {
     windontypeBtn.addEventListener('click', ()=>{
@@ -145,6 +148,12 @@ horizontalSlider.oninput = function() {
     imageFrame.style.paddingLeft = this.value + "px";
     horizontalSliderNum.textContent = this.value + "px"
 }
+
+
+// imageFrame.style.paddingRight = this.value + "px";
+// 
+// 
+
 
 verticalSlider.oninput = function() {
     imageFrame.style.paddingTop = this.value + "px";
