@@ -4,18 +4,12 @@ const horizontalSlider = document.querySelector('.horizontalSlider')
 const verticalSlider = document.querySelector('.verticalSlider')
 const verticalSliderNum = document.querySelector('.verticalSliderNum')
 const horizontalSliderNum = document.querySelector('.horizontalSliderNum')
-const topLeftRaduisSliderNum = document.querySelector('.topLeftRaduisSliderNum')
-const topLeftRaduisSlider = document.querySelector('.topLeftRaduisSlider')
 
-const topRightRaduisSlider = document.querySelector('.topRightRaduisSlider')
-const topRightRaduisSliderNum = document.querySelector('.topRightRaduisSliderNum')
+const borderRadiusSlider = document.querySelector('.borderRadiusSlider')
+const borderRadiusSliderNum = document.querySelector('.borderRadiusSliderNum')
 
-const bottomRightRaduisSlider = document.querySelector('.bottomRightRaduisSlider')
-const bottomRightRaduisSliderNum = document.querySelector('.bottomRightRaduisSliderNum')
-
-const bottomLeftRaduisSlider = document.querySelector('.bottomLeftRaduisSlider')
-const bottomLeftRaduisSliderNum = document.querySelector('.bottomLeftRaduisSliderNum')
-
+const boxShadowThicknessSlider = document.querySelector('.boxShadowThicknessSlider')
+const boxShadowThicknessSliderNum = document.querySelector('.boxShadowThicknessSliderNum')
 
 const topBar = document.querySelector(".topBar")
 const topBarSpan = document.querySelectorAll(".topBar span")
@@ -141,26 +135,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     editingImage.style.borderRadius = `0 0 10px 10px`
 
-    topLeftRaduisSlider.oninput = function(){
-        topLeftRaduisSliderNum.textContent = this.value + "px"
-        editingImage.style.borderTopLeftRadius = `${this.value}px`
-    }
-
-    topRightRaduisSlider.oninput = function(){
-        editingImage.style.borderTopRightRadius = `${this.value}px`
-        topRightRaduisSliderNum.textContent = this.value + "px"
-    }
-
-    bottomRightRaduisSlider.oninput = function(){
-        editingImage.style.borderBottomRightRadius = `${this.value}px`
-        bottomRightRaduisSliderNum.textContent = this.value + "px"
-    }
-
-    bottomLeftRaduisSlider.oninput = function(){
+    borderRadiusSlider.oninput = function(){
+        borderRadiusSliderNum.textContent = this.value + "px"
+        topBar.style.borderTopRightRadius = `${this.value}px`
+        topBar.style.borderTopLeftRadius = `${this.value}px`
         editingImage.style.borderBottomLeftRadius = `${this.value}px`
-        bottomLeftRaduisSliderNum.textContent = this.value + "px"
+        editingImage.style.borderBottomRightRadius = `${this.value}px`
     }
 
+    boxShadowThicknessSlider.oninput = function(){
+        if(topBar.classList.contains('box-shadow')){
+        topBar.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`
+        editingImage.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`
+        boxShadowThicknessSliderNum.textContent = `${this.value}px`
+        }else{
+            return
+        }
+    }
 });
 
 
@@ -247,7 +238,7 @@ horizontalSlider.oninput = function() {
     horizontalSliderNum.textContent = this.value + "px"
 
     if(Number(verticalSlider.value) === 0 && Number(horizontalSlider.value) === 0){
-        imageFrame.style.borderRadius = "10px"
+        imageFrame.style.borderRadius = "20px"
     }else{
         imageFrame.style.borderRadius = "0px"
     }
@@ -259,7 +250,7 @@ verticalSlider.oninput = function() {
     verticalSliderNum.textContent = this.value + "px"
 
     if(Number(verticalSlider.value) === 0 && Number(horizontalSlider.value) === 0){
-        imageFrame.style.borderRadius = "10px"
+        imageFrame.style.borderRadius = "20px"
     }else{
         imageFrame.style.borderRadius = "0px"
     }

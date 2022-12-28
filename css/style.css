@@ -372,7 +372,7 @@ input[type="file"] {
     width: 35px;
     border-radius: 5px;
     margin-top: 5px;
-    background-color: red;
+    cursor: pointer;
   }
 
   .tabColor{
@@ -515,7 +515,7 @@ input[type="file"] {
     right: 77%;
   }
 
-  .window, .colorSection, .padding, .borderRadius{
+  .window, .colorSection, .padding, .borderRadius, .boxShadowThickness{
     padding: 20px;
   }
 
