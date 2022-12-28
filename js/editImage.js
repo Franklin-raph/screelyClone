@@ -14,7 +14,6 @@ const windowStyleBtns = document.querySelectorAll(".windowStyleBtns button")
 const tabButtons = document.querySelectorAll('.backgroundTab button');
 const tabColors = document.querySelectorAll('.tabColor')
 const gradientColorsDivs = document.querySelectorAll(".gradientColors div")
-const imgandbarIMG = document.querySelector(".imgandbar img")
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
@@ -121,14 +120,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const imgUrl = localStorage.getItem('image')
 
     const img = new Image();
-    // img.src = imgUrl;
-    imgandbarIMG.src = imgUrl
-    // imgandbar.appendChild(img)
+    img.src = imgUrl;
+    imgandbar.appendChild(img)
+    // imgandbarIMG.src = imgUrl
 });
 
 function toggleShadow(){
     topBar.classList.toggle("box-shadow")
-    imgandbarIMG.classList.toggle('box-shadow')
+    Array.from(imgandbar.children)[1].classList.toggle('box-shadow')
 }
 
 function clrStorage(){
