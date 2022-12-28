@@ -4,9 +4,21 @@ const horizontalSlider = document.querySelector('.horizontalSlider')
 const verticalSlider = document.querySelector('.verticalSlider')
 const verticalSliderNum = document.querySelector('.verticalSliderNum')
 const horizontalSliderNum = document.querySelector('.horizontalSliderNum')
+const topLeftRaduisSliderNum = document.querySelector('.topLeftRaduisSliderNum')
+const topLeftRaduisSlider = document.querySelector('.topLeftRaduisSlider')
+
+const topRightRaduisSlider = document.querySelector('.topRightRaduisSlider')
+const topRightRaduisSliderNum = document.querySelector('.topRightRaduisSliderNum')
+
+const bottomRightRaduisSlider = document.querySelector('.bottomRightRaduisSlider')
+const bottomRightRaduisSliderNum = document.querySelector('.bottomRightRaduisSliderNum')
+
+const bottomLeftRaduisSlider = document.querySelector('.bottomLeftRaduisSlider')
+const bottomLeftRaduisSliderNum = document.querySelector('.bottomLeftRaduisSliderNum')
+
+
 const topBar = document.querySelector(".topBar")
 const topBarSpan = document.querySelectorAll(".topBar span")
-const imgandbar = document.querySelector(".imgandbar")
 const windowTypeAndStyleNav = document.querySelector('.windowTypeAndStyleNav')
 const windowOverLay = document.querySelector('.windowOverLay')
 const windowTypeBtns = document.querySelectorAll(".windowTypeBtns button")
@@ -14,6 +26,8 @@ const windowStyleBtns = document.querySelectorAll(".windowStyleBtns button")
 const tabButtons = document.querySelectorAll('.backgroundTab button');
 const tabColors = document.querySelectorAll('.tabColor')
 const gradientColorsDivs = document.querySelectorAll(".gradientColors div")
+const imageBorderRadius = document.querySelectorAll('.bRadius')
+
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
@@ -121,13 +135,38 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     const img = new Image();
     img.src = imgUrl;
-    imgandbar.appendChild(img)
-    // imgandbarIMG.src = imgUrl
+    imageFrame.appendChild(img)
+
+    const editingImage = Array.from(imageFrame.children)[1]
+
+    editingImage.style.borderRadius = `0 0 10px 10px`
+
+    topLeftRaduisSlider.oninput = function(){
+        topLeftRaduisSliderNum.textContent = this.value + "px"
+        editingImage.style.borderTopLeftRadius = `${this.value}px`
+    }
+
+    topRightRaduisSlider.oninput = function(){
+        editingImage.style.borderTopRightRadius = `${this.value}px`
+        topRightRaduisSliderNum.textContent = this.value + "px"
+    }
+
+    bottomRightRaduisSlider.oninput = function(){
+        editingImage.style.borderBottomRightRadius = `${this.value}px`
+        bottomRightRaduisSliderNum.textContent = this.value + "px"
+    }
+
+    bottomLeftRaduisSlider.oninput = function(){
+        editingImage.style.borderBottomLeftRadius = `${this.value}px`
+        bottomLeftRaduisSliderNum.textContent = this.value + "px"
+    }
+
 });
+
 
 function toggleShadow(){
     topBar.classList.toggle("box-shadow")
-    Array.from(imgandbar.children)[1].classList.toggle('box-shadow')
+    Array.from(imageFrame.children)[1].classList.toggle('box-shadow')
 }
 
 function clrStorage(){
@@ -205,16 +244,16 @@ horizontalSlider.oninput = function() {
     horizontalSliderNum.textContent = this.value + "px"
 }
 
-
-// imageFrame.style.paddingRight = this.value + "px";
-// 
-// 
-
-
 verticalSlider.oninput = function() {
     imageFrame.style.paddingTop = this.value + "px";
     imageFrame.style.paddingBottom = this.value + "px";
     verticalSliderNum.textContent = this.value + "px"
+
+    // if(Number(verticalSlider.value) === 0 && Number(verticalSlider.value) === 0){
+    //     imageFrame.style.backgroundColor = "transparent"
+    // }
+
+    // console.log(typeof )
 }
 
 function toggleMode(){
@@ -224,7 +263,6 @@ function toggleMode(){
 gradientColorsDivs.forEach(gradientColor => {
     gradientColor.addEventListener('click', () => {
         imageFrame.style.background = window.getComputedStyle(gradientColor).background
-
     })
 })
 
@@ -249,4 +287,8 @@ function openNav(){
 function closeNav(){
     windowTypeAndStyleNav.style.right = "-400px"
     windowOverLay.style.display = 'none'
+}
+
+function resetEdit(){
+    location.reload()
 }

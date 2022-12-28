@@ -19,14 +19,11 @@
     <div class="editingSpace">
         <div class="left">
             <div class="imageFrame">
-                <div class="imgandbar">
-                    <div class="topBar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span class="browserBar"></span>
-                    </div>
-                    <!-- <img src="#" class="full" alt=""> -->
+                <div class="topBar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="browserBar"></span>
                 </div>
             </div>
         </div>
@@ -123,11 +120,43 @@
                     </div>
                 </div>
             </div>
+            <div class="borderRadius">
+                <h3>Border Radius</h3>
+                <div class="topLeft bRadius">
+                    <p>Top-Left</p>
+                    <div class="sliderAndValue">
+                        <input type="range" max="20" min="0" value="10" class="topLeftRaduisSlider">
+                        <p class="topLeftRaduisSliderNum">10px</p>
+                    </div>
+                </div>
+                <div class="topRight bRadius">
+                    <p>Top-Right</p>
+                    <div class="sliderAndValue">
+                        <input type="range" max="20" min="0" value="10" class="topRightRaduisSlider">
+                        <p class="topRightRaduisSliderNum">10px</p>
+                    </div>
+                </div>
+                <div class="bottomRight bRadius">
+                    <p>Bottom-Right</p>
+                    <div class="sliderAndValue">
+                        <input type="range" max="20" min="0" value="10" class="bottomRightRaduisSlider">
+                        <p class="bottomRightRaduisSliderNum">10px</p>
+                    </div>
+                </div>
+                <div class="bottomLeft bRadius">
+                    <p>Bottom-Left</p>
+                    <div class="sliderAndValue">
+                        <input type="range" max="20" min="0" value="10" class="bottomLeftRaduisSlider">
+                        <p class="bottomLeftRaduisSliderNum">10px</p>
+                    </div>
+                </div>
+            </div>
             <button class="downloadImage">Download <i class="ph-download-simple"></i> </button>
+            <button class="resetBtn" onclick="resetEdit()">Reset <i class="ph-arrow-counter-clockwise"></i> </button>
         </div>
     </div>
     
-
+    
     <script src="/js/pickr.js"></script>
     <script src="/js/html2canvas.js" type="module"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>

@@ -217,6 +217,22 @@ input[type="file"] {
     height: 100vh;
     /* padding: 20px; */
     color: #fff;
+    overflow: auto;
+}
+
+.right::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+.right::-webkit-scrollbar-track {
+    background: #2F3542;
+    width: 5px;
+}
+  
+.right::-webkit-scrollbar-thumb {
+    background-color: #505050;
+    border-radius: 20px;
+    border: 3px solid #2F3542;
 }
 
 .right h3{
@@ -249,6 +265,13 @@ input[type="file"] {
     padding: 12px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.resetBtn{
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #C90B34;
 }
 
 .text{
@@ -492,7 +515,7 @@ input[type="file"] {
     right: 77%;
   }
 
-  .window, .colorSection, .padding{
+  .window, .colorSection, .padding, .borderRadius{
     padding: 20px;
   }
 
@@ -525,4 +548,8 @@ input[type="file"] {
 
   .activeWindowButton{
     background-color: #505050;
+  }
+
+  .topLeft, .topRight, .bottomRight{
+    margin-bottom: 10px;
   }
