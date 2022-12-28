@@ -9,7 +9,7 @@ const imgandbar = document.querySelector(".imgandbar")
 const windowTypeAndStyleNav = document.querySelector('.windowTypeAndStyleNav')
 const windowOverLay = document.querySelector('.windowOverLay')
 const windowTypeBtns = document.querySelectorAll(".windowTypeBtns button")
-console.log(windowTypeBtns)
+const windowStyleBtns = document.querySelectorAll(".windowStyleBtns button")
 
 document.querySelector('.noWindow').addEventListener('click', () => {topBar.style.display = "none"})
 
@@ -23,10 +23,13 @@ document.querySelector('.browserWindow').addEventListener('click', () => {
     document.querySelector('.browserBar').style.display = "block"
 })
 
-document.querySelector(".ph-caret-down").addEventListener("click", ()=>{
+document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
 })
 
+document.querySelector('.windowStylyeBtn').addEventListener("click", ()=>{
+    document.querySelector('.windowStyleBtns').classList.toggle('hide')
+})
 
 windowTypeBtns.forEach((windontypeBtn, index) => {
     windontypeBtn.addEventListener('click', ()=>{
@@ -34,6 +37,21 @@ windowTypeBtns.forEach((windontypeBtn, index) => {
             unselectedBtn.classList.remove('activeWindowButton')
         })
         windowTypeBtns[index].classList.add("activeWindowButton")
+
+        if(windowTypeBtns[0].classList.contains('activeWindowButton')){
+            document.querySelector('.windowStyle').style.display = "none"
+        }else{
+            document.querySelector('.windowStyle').style.display = "block"
+        }
+    })
+  })
+
+  windowStyleBtns.forEach((windonstyleBtn, index) => {
+    windonstyleBtn.addEventListener('click', ()=>{
+        windowStyleBtns.forEach(unselectedBtn => {
+            unselectedBtn.classList.remove('activeWindowButton')
+        })
+        windowStyleBtns[index].classList.add("activeWindowButton")
     })
   })
 

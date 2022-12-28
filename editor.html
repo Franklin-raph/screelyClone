@@ -49,14 +49,20 @@
                             <p>Window Style</p>
                             <i class="ph-caret-down"></i>
                         </div>
+                        <div class="windowStyleBtns">
+                            <button class="none">None</button>
+                            <button class="regular activeWindowButton">Regular</button>
+                            <button class="darken">Darken</button>
+                            <button class="outline">Outline</button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="window">
                 <div class="text">
-                    <div class="windowNav">
+                    <div class="windowNav" onclick="openNav()">
                         <h3>Window</h3>
-                        <i class="ph-caret-right" onclick="openNav()"></i>
+                        <i class="ph-caret-right"></i>
                     </div>
                     <div class="icons">
                         <i class="ph-selection-background" onclick="toggleShadow()">

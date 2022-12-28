@@ -449,11 +449,11 @@ input[type="file"] {
     display: flex;
     gap: 5px;
     align-items: center;
+    cursor: pointer;
   }
 
   .ph-caret-right{
     font-size: 20px;
-    cursor: pointer;
   }
 
   .windowTypeAndStyleNav{
@@ -509,12 +509,12 @@ input[type="file"] {
     font-size: 18px;
   }
 
-  .windowTypeBtns button{
+  .windowTypeBtns button, .windowStyleBtns button{
     display: block;
     padding: 12px;
   }
 
-  .windowTypeBtns{
+  .windowTypeBtns, .windowStyleBtns{
     display: none;
   }
 
