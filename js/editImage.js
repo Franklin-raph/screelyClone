@@ -5,11 +5,15 @@ const verticalSlider = document.querySelector('.verticalSlider')
 const verticalSliderNum = document.querySelector('.verticalSliderNum')
 const horizontalSliderNum = document.querySelector('.horizontalSliderNum')
 const topBar = document.querySelector(".topBar")
+const topBarSpan = document.querySelectorAll(".topBar span")
 const imgandbar = document.querySelector(".imgandbar")
 const windowTypeAndStyleNav = document.querySelector('.windowTypeAndStyleNav')
 const windowOverLay = document.querySelector('.windowOverLay')
 const windowTypeBtns = document.querySelectorAll(".windowTypeBtns button")
 const windowStyleBtns = document.querySelectorAll(".windowStyleBtns button")
+const tabButtons = document.querySelectorAll('.backgroundTab button');
+const tabColors = document.querySelectorAll('.tabColor')
+const gradientColorsDivs = document.querySelectorAll(".gradientColors div")
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
@@ -58,6 +62,56 @@ windowTypeBtns.forEach((windontypeBtn, index) => {
     })
   })
 
+  windowStyleBtns[0].addEventListener('click', ()=>{
+    topBarSpan.forEach(span => {
+        span.style.display = "none"
+        topBar.style.display = "block"
+    })
+})
+
+windowStyleBtns[1].addEventListener('click', ()=>{
+    topBarSpan.forEach(span => {
+        topBarSpan[0].style.display = "inline-block"
+        topBarSpan[1].style.display = "inline-block"
+        topBarSpan[2].style.display = "inline-block"
+
+        topBarSpan[0].style.backgroundColor = "#FF5F56"
+        topBarSpan[1].style.backgroundColor = "#FFBD2E"
+        topBarSpan[2].style.backgroundColor = "#27C93F"
+
+        topBarSpan[0].style.border = "none"
+        topBarSpan[1].style.border = "none"
+        topBarSpan[2].style.border = "none"
+    })
+})
+
+windowStyleBtns[2].addEventListener('click', ()=>{
+    topBarSpan.forEach(span => {
+        topBarSpan[0].style.display = "inline-block"
+        topBarSpan[1].style.display = "inline-block"
+        topBarSpan[2].style.display = "inline-block"
+
+        topBarSpan[0].style.backgroundColor = "#979799"
+        topBarSpan[1].style.backgroundColor = "#979799"
+        topBarSpan[2].style.backgroundColor = "#979799"
+    })
+})
+
+windowStyleBtns[3].addEventListener('click', ()=>{
+    topBarSpan.forEach(span => {
+        topBarSpan[0].style.display = "inline-block"
+        topBarSpan[1].style.display = "inline-block"
+        topBarSpan[2].style.display = "inline-block"
+        
+        topBarSpan[0].style.backgroundColor = "#E8E8E8"
+        topBarSpan[1].style.backgroundColor = "#E8E8E8"
+        topBarSpan[2].style.backgroundColor = "#E8E8E8"
+
+        topBarSpan[0].style.border = "1px solid #979799"
+        topBarSpan[1].style.border = "1px solid #979799"
+        topBarSpan[2].style.border = "1px solid #979799"
+    })
+})
 
 const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{location.reload()})
 
@@ -164,12 +218,6 @@ verticalSlider.oninput = function() {
 function toggleMode(){
     topBar.classList.toggle("dark")
 }
-
-const tabButtons = document.querySelectorAll('.backgroundTab button');
-const tabColors = document.querySelectorAll('.tabColor')
-
-const gradientColorsDivs = document.querySelectorAll(".gradientColors div")
-console.log(tabButtons)
 
 gradientColorsDivs.forEach(gradientColor => {
     gradientColor.addEventListener('click', () => {
