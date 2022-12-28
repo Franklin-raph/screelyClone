@@ -238,10 +238,19 @@ imageDownloadButton.addEventListener('click', ()=>{
         });
 })
 
+console.log(Number(verticalSlider.value))
+
+
 horizontalSlider.oninput = function() {
     imageFrame.style.paddingRight = this.value + "px";
     imageFrame.style.paddingLeft = this.value + "px";
     horizontalSliderNum.textContent = this.value + "px"
+
+    if(Number(verticalSlider.value) === 0 && Number(horizontalSlider.value) === 0){
+        imageFrame.style.borderRadius = "10px"
+    }else{
+        imageFrame.style.borderRadius = "0px"
+    }
 }
 
 verticalSlider.oninput = function() {
@@ -249,11 +258,11 @@ verticalSlider.oninput = function() {
     imageFrame.style.paddingBottom = this.value + "px";
     verticalSliderNum.textContent = this.value + "px"
 
-    // if(Number(verticalSlider.value) === 0 && Number(verticalSlider.value) === 0){
-    //     imageFrame.style.backgroundColor = "transparent"
-    // }
-
-    // console.log(typeof )
+    if(Number(verticalSlider.value) === 0 && Number(horizontalSlider.value) === 0){
+        imageFrame.style.borderRadius = "10px"
+    }else{
+        imageFrame.style.borderRadius = "0px"
+    }
 }
 
 function toggleMode(){
