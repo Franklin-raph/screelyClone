@@ -8,6 +8,8 @@ const topBar = document.querySelector(".topBar")
 const imgandbar = document.querySelector(".imgandbar")
 const windowTypeAndStyleNav = document.querySelector('.windowTypeAndStyleNav')
 const windowOverLay = document.querySelector('.windowOverLay')
+const windowTypeBtns = document.querySelectorAll(".windowTypeBtns button")
+console.log(windowTypeBtns)
 
 document.querySelector('.noWindow').addEventListener('click', () => {topBar.style.display = "none"})
 
@@ -20,6 +22,21 @@ document.querySelector('.browserWindow').addEventListener('click', () => {
     topBar.style.display = "flex"
     document.querySelector('.browserBar').style.display = "block"
 })
+
+document.querySelector(".ph-caret-down").addEventListener("click", ()=>{
+    document.querySelector('.windowTypeBtns').classList.toggle('hide')
+})
+
+
+windowTypeBtns.forEach((windontypeBtn, index) => {
+    windontypeBtn.addEventListener('click', ()=>{
+        windowTypeBtns.forEach(unselectedBtn => {
+            unselectedBtn.classList.remove('activeWindowButton')
+        })
+        windowTypeBtns[index].classList.add("activeWindowButton")
+    })
+  })
+
 
 const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{location.reload()})
 
@@ -134,13 +151,13 @@ gradientColorsDivs.forEach(gradientColor => {
     })
 })
 
-tabButtons.forEach((header, index) => {
-    header.addEventListener('click', () => {
+tabButtons.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
         tabColors.forEach(tabColor => {
             tabColor.classList.remove('active')
         });
-        tabButtons.forEach(headerTab => {
-            headerTab.classList.remove('active')
+        tabButtons.forEach(unselectedTab => {
+            unselectedTab.classList.remove('active')
         });
         tabButtons[index].classList.add('active')
         tabColors[index].classList.add('active')

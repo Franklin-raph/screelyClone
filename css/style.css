@@ -511,5 +511,17 @@ input[type="file"] {
 
   .windowTypeBtns button{
     display: block;
-    margin: 8px 0;
+    padding: 12px;
+  }
+
+  .windowTypeBtns{
+    display: none;
+  }
+
+  .hide{
+    display: block;
+  }
+
+  .activeWindowButton{
+    background-color: #505050;
   }
