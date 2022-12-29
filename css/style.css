@@ -179,9 +179,9 @@ input[type="file"] {
     flex-direction: column;
     background-color: #c90b34;;
     padding: 40px;
-    width: 40%; /* formely: 40%; */
+    width: 75%; /* formely: 40%; */
     box-sizing: border-box;
-    margin: 7rem auto 2rem;
+    margin: 5rem auto 2rem;
     /* height: 70%; */
 }
 
@@ -290,8 +290,8 @@ input[type="file"] {
 }
 
 .box-shadow{
-    box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 10px 22px rgb(0 0 0 / 20%);
-    /* box-shadow: 10px 20px 30px #000000; */
+    /* box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 10px 22px rgb(0 0 0 / 20%); */
+    box-shadow: 3px 3px 100px rgba(0, 0, 0, .5);
 }
 
 #EditorPageNav .navLinks{
