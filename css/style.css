@@ -291,7 +291,11 @@ input[type="file"] {
 
 .box-shadow{
     /* box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 10px 22px rgb(0 0 0 / 20%); */
-    box-shadow: 3px 3px 100px rgba(0, 0, 0, .5);
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, .5);
+}
+
+input[type="range"]{
+    cursor: pointer;
 }
 
 #EditorPageNav .navLinks{
