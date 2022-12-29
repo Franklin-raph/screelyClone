@@ -21,30 +21,17 @@ const tabButtons = document.querySelectorAll('.backgroundTab button');
 const tabColors = document.querySelectorAll('.tabColor')
 const gradientColorsDivs = document.querySelectorAll(".gradientColors div")
 const imageBorderRadius = document.querySelectorAll('.bRadius')
-
+const noWindow = document.querySelector('.noWindow')
+const browserWindow = document.querySelector('.browserWindow')
+const plainWindow = document.querySelector('.plainWindow')
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
 })
 
-document.querySelector('.noWindow').addEventListener('click', () => {topBar.style.display = "none"})
-
-document.querySelector('.plainWindow').addEventListener('click', () => {
-    topBar.style.display = "flex"
-    document.querySelector('.browserBar').style.display = "none"
-})
-
-document.querySelector('.browserWindow').addEventListener('click', () => {
-    topBar.style.display = "flex"
-    document.querySelector('.browserBar').style.display = "block"
-})
-
-
 document.querySelector('.windowStylyeBtn').addEventListener("click", ()=>{
     document.querySelector('.windowStyleBtns').classList.toggle('hide')
 })
-
-document.querySelector('.none').addEventListener('click', () => {topBar.style.display = "none"})
 
 windowTypeBtns.forEach((windontypeBtn, index) => {
     windontypeBtn.addEventListener('click', ()=>{
@@ -59,16 +46,16 @@ windowTypeBtns.forEach((windontypeBtn, index) => {
             document.querySelector('.windowStyle').style.display = "block"
         }
     })
-  })
+})
 
-  windowStyleBtns.forEach((windonstyleBtn, index) => {
+windowStyleBtns.forEach((windonstyleBtn, index) => {
     windonstyleBtn.addEventListener('click', ()=>{
         windowStyleBtns.forEach(unselectedBtn => {
             unselectedBtn.classList.remove('activeWindowButton')
         })
         windowStyleBtns[index].classList.add("activeWindowButton")
     })
-  })
+})
 
   windowStyleBtns[0].addEventListener('click', ()=>{
     topBarSpan.forEach(span => {
@@ -124,7 +111,6 @@ windowStyleBtns[3].addEventListener('click', ()=>{
 const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{location.reload()})
 
 document.addEventListener('DOMContentLoaded', (e) => {
-
     const imgUrl = localStorage.getItem('image')
 
     const img = new Image();
@@ -133,7 +119,28 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     const editingImage = Array.from(imageFrame.children)[1]
 
-    editingImage.style.borderRadius = `0 0 10px 10px`
+    editingImage.style.borderBottomLeftRadius = `10px`
+    editingImage.style.borderBottomRightRadius = `10px`
+
+    noWindow.addEventListener('click', () => {
+        topBar.style.display = "none"
+        editingImage.style.borderTopLeftRadius = "10px"
+        editingImage.style.borderTopRightRadius = "10px"
+    })
+
+    browserWindow.addEventListener('click', () => {
+        topBar.style.display = "flex"
+        document.querySelector('.browserBar').style.display = "block"
+        editingImage.style.borderTopLeftRadius = "0"
+        editingImage.style.borderTopRightRadius = "0"
+    })
+
+    plainWindow.addEventListener('click', () => {
+        topBar.style.display = "flex"
+        document.querySelector('.browserBar').style.display = "none"
+        editingImage.style.borderTopLeftRadius = "0"
+        editingImage.style.borderTopRightRadius = "0"
+    })
 
     borderRadiusSlider.oninput = function(){
         borderRadiusSliderNum.textContent = this.value + "px"
@@ -141,6 +148,16 @@ document.addEventListener('DOMContentLoaded', (e) => {
         topBar.style.borderTopLeftRadius = `${this.value}px`
         editingImage.style.borderBottomLeftRadius = `${this.value}px`
         editingImage.style.borderBottomRightRadius = `${this.value}px`
+
+        if(noWindow.classList.contains('activeWindowButton')){
+            editingImage.style.borderTopLeftRadius = `${this.value}px`
+            editingImage.style.borderTopRightRadius = `${this.value}px`
+
+            editingImage.style.borderTopLeftRadius = "10px !important"
+        }else{
+            editingImage.style.borderTopLeftRadius = "0px"
+            editingImage.style.borderTopRightRadius = "0px"
+        }
     }
 
     boxShadowThicknessSlider.oninput = function(){
@@ -228,8 +245,6 @@ imageDownloadButton.addEventListener('click', ()=>{
             anchorTag.click();
         });
 })
-
-console.log(Number(verticalSlider.value))
 
 
 horizontalSlider.oninput = function() {
