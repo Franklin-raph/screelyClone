@@ -567,6 +567,22 @@ input[type="range"]{
     color: #fff;
 }
 
+.borderRadius{
+    border-top: 1px solid rgb(148, 148, 148);
+    border-bottom: 1px solid rgb(148, 148, 148);
+}
+
+.boxShadowThickness{
+    border-bottom: 1px solid rgb(148, 148, 148);
+}
+
+@media screen and (max-width:1200px) {
+    .editingSpace{
+        grid-template-columns: 6fr;
+    }
+    
+}
+
   @media screen and (max-width: 992px) {
     .navbar{
         justify-content: space-between;
