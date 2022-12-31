@@ -665,4 +665,9 @@ input[type="range"]{
     #navClose{
         display: none;
     }
+
+    #EditorPageNav{
+        justify-content: space-between;
+        padding: 30px;
+    }
   }
