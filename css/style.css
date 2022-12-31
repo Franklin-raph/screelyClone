@@ -562,6 +562,11 @@ input[type="range"]{
     display: none;
 }
 
+.toggler i{
+    font-size: 30px;
+    color: #fff;
+}
+
   @media screen and (max-width: 992px) {
     .navbar{
         justify-content: space-between;
@@ -637,7 +642,7 @@ input[type="range"]{
         display: block;
     }
 
-    .navClose{
+    #navClose{
         display: none;
     }
   }
