@@ -557,3 +557,42 @@ input[type="range"]{
   .topLeft, .topRight, .bottomRight{
     margin-bottom: 10px;
   }
+
+  @media screen and (max-width: 992px) {
+    .navbar{
+        justify-content: space-between;
+        padding: 30px 50px 70px;
+    }
+
+    #hero{
+        height: 98vh;
+    }
+
+    .heroText h1{
+        font-size: 30px;
+        width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .heroText h1{
+        font-size: 30px;
+        width: 80%;
+    }
+
+    #hero{
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    }
+
+    .heroText p{
+        text-align: center;
+        padding: 0 20px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .mainBox{
+        width: 90%;
+        text-align: center;
+    }
+  }
