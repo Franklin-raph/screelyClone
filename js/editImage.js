@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 function clrStorage(){
     localStorage.removeItem('image')
-    location.reload(true)
+    location.href = "/"
 }
 
 // Simple example, see optional options for more configuration.
