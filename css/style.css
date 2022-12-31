@@ -40,7 +40,7 @@ button{
     font-size: 28px;
 }
 
-.navLinks{
+#hero .navLinks{
     display: flex;
     gap: 30px;
 }
@@ -558,6 +558,10 @@ input[type="range"]{
     margin-bottom: 10px;
   }
 
+  .toggler{
+    display: none;
+}
+
   @media screen and (max-width: 992px) {
     .navbar{
         justify-content: space-between;
@@ -588,11 +592,52 @@ input[type="range"]{
         text-align: center;
         padding: 0 20px;
     }
+
+    .navbar{
+        padding: 30px 30px 60px;
+    }
   }
 
   @media screen and (max-width: 576px) {
+    .heroText h1{
+        font-size: 25px;
+        width: 96%;
+    }
+
     .mainBox{
         width: 90%;
         text-align: center;
+    }
+
+    .bottomBox{
+        padding: 45px;
+    }
+  }
+
+  @media screen and (max-width:480px) {
+    #hero .navLinks{
+        position: absolute;
+        flex-direction: column;
+        background-color: #fff;
+        top: -30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 70%;
+        padding: 30px;
+        border-radius: 10px;
+        transition: .5s;
+    }
+    
+    #hero .navLinks a{
+        color: #000000;
+    }
+
+    .toggler{
+        display: block;
+    }
+
+    .navClose{
+        display: none;
     }
   }
