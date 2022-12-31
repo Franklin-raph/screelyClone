@@ -628,7 +628,7 @@ input[type="range"]{
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        width: 70%;
+        width: 90%;
         padding: 30px;
         border-radius: 10px;
         transition: .5s;

@@ -16,7 +16,7 @@ function editImage(e) {
 }
 
 navOpen.addEventListener("click", () => {
-    navLink.style.top = "25%"
+    navLink.style.top = "30%"
     navOpen.style.display = "none"
     navClose.style.display = "block"
 })
