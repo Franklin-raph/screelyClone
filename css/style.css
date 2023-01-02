@@ -247,11 +247,6 @@ input[type="file"] {
     margin-bottom: 5px;
 }
 
-.padding{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
 .vertical, .horizontal{
     margin-bottom: 10px;
 }
@@ -338,31 +333,36 @@ input[type="range"]{
     visibility: visible;
   }
 
-  .backgroundTab{
+  .backgroundTab, .paddingAndBorderRadiusTab{
       border: 1px solid #ccc;
       display: inline-flex;
-      margin-bottom: 8px;
+      margin-bottom: 20px;
       border-radius: 7px;
   }
 
-  .backgroundTab button{
+  .backgroundTab button, .paddingAndBorderRadiusTab button{
     cursor: pointer;
     padding: 7px 18px;
     border-radius: 7px;
   }
 
-  .backgroundTab button:first-child{
-    border-right: 1px solid #ccc;
+  .backgroundTab button:first-child, .paddingAndBorderRadiusTab button:first-child{
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }
 
-  .backgroundTab button.active{
+  .backgroundTab button:nth-child(2), .paddingAndBorderRadiusTab button:nth-child(2){
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-radius: 0;
+  }
+
+  .backgroundTab button.active, .paddingAndBorderRadiusTab button.active{
     background-color: #ffffff;
     color: #000000;
   }
 
-  .backgroundTab button.active:last-child{
+  .backgroundTab button.active:last-child, .paddingAndBorderRadiusTab button.active:last-child{
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
   }
@@ -382,12 +382,16 @@ input[type="range"]{
     cursor: pointer;
   }
 
-  .tabColor{
+  .tabColor, .padandBorder{
     display: none;
   }
 
   .colorSection .active{
     display: grid;
+  }
+
+  .paddingAndBorderRadius .active{
+    display: block;
   }
 
   .colorSection{
@@ -522,7 +526,7 @@ input[type="range"]{
     right: 77%;
   }
 
-  .window, .colorSection, .padding, .borderRadius, .boxShadowThickness, .filterControls, .rotateAndFlipBtns{
+  .window, .colorSection, .paddingAndBorderRadius, .rotateAndFlipBtns{
     padding: 20px;
   }
 
@@ -570,9 +574,13 @@ input[type="range"]{
     color: #fff;
 }
 
-.borderRadius, .rotateAndFlipBtns{
+.rotateAndFlipBtns{
     border-top: 1px solid rgb(148, 148, 148);
     border-bottom: 1px solid rgb(148, 148, 148);
+}
+
+.borderRadius{
+    display: none;
 }
 
 .rotateAndFlipBtns div{
@@ -599,15 +607,25 @@ input[type="range"]{
     gap: 10px;
 }
 
-.boxShadowThickness{
-    border-bottom: 1px solid rgb(148, 148, 148);
+.paddingAndBorderRadius button{
+    font-size: 14px;
+}
+
+.resetFilterBtn{
+    max-width: 65%;
+}
+
+.right h3{
+    font-size: 20px;
 }
 
 @media screen and (max-width:1200px) {
     .editingSpace{
         grid-template-columns: 6fr;
     }
-    
+    .resetFilterBtn{
+        max-width: 20%;
+    }
 }
 
   @media screen and (max-width: 992px) {
@@ -623,6 +641,9 @@ input[type="range"]{
     .heroText h1{
         font-size: 30px;
         width: 60%;
+    }
+    .resetFilterBtn{
+        max-width: 25%;
     }
   }
 
@@ -644,6 +665,9 @@ input[type="range"]{
     .navbar{
         padding: 30px 30px 60px;
     }
+    .resetFilterBtn{
+        max-width: 35%;
+    }
   }
 
   @media screen and (max-width: 576px) {
@@ -663,6 +687,9 @@ input[type="range"]{
 
     .imageFrame{
         width: 90%; /* formely: 40%; */
+    }
+    .resetFilterBtn{
+        max-width: 42%;
     }
   }
 
@@ -697,5 +724,8 @@ input[type="range"]{
         justify-content: space-between;
         padding: 20px 15px;
         font-size: 20px;
+    }
+    .resetFilterBtn{
+        max-width: 65%;
     }
   }

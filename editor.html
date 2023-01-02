@@ -67,75 +67,159 @@
                 </div>
             </div>
             <div class="colorSection">
-                <h3>Background</h3>
+                <h3>Background and Filter</h3>
                 <div class="backgroundTab">
                     <button class="active" id="solidBtn">Solid</button>
                     <button>Gradient</button>
+                    <button>Filters</button>
                 </div>
-                <p>Color</p>
                 <div class="tabColor active">
+                    <p>Color</p>
                     <div class="color-picker"></div>
                 </div>
-                <div class="gradientColors tabColor">
-                    <div class="g-1"></div>
-                    <div class="g-2"></div>
-                    <div class="g-3"></div>
-                    <div class="g-4"></div>
-                    <div class="g-5"></div>
-                    <div class="g-6"></div>
-                    <div class="g-7"></div>
-                    <div class="g-8"></div>
-                    <div class="g-9"></div>
-                    <div class="g-10"></div>
-                    <div class="g-11"></div>
-                    <div class="g-12"></div>
-                    <div class="g-13"></div>
-                    <div class="g-14"></div>
-                    <div class="g-15"></div>
-                    <div class="g-16"></div>
-                    <div class="g-17"></div>
-                    <div class="g-18"></div>
-                    <div class="g-19"></div>
-                    <div class="g-20"></div>
-                </div>
-            </div>
-            <div class="padding">
-                <h3>Padding</h3>
-                <div class="vertical">
-                    <p>Vertical</p>
-                    <div class="sliderAndValue">
-                        <input type="range" max="150" min="0" value="50" class="verticalSlider">
-                        <p class="verticalSliderNum">50px</p>
+                <div class="tabColor">
+                    <p>Color</p>
+                    <div class="gradientColors">
+                        <div class="g-1"></div>
+                        <div class="g-2"></div>
+                        <div class="g-3"></div>
+                        <div class="g-4"></div>
+                        <div class="g-5"></div>
+                        <div class="g-6"></div>
+                        <div class="g-7"></div>
+                        <div class="g-8"></div>
+                        <div class="g-9"></div>
+                        <div class="g-10"></div>
+                        <div class="g-11"></div>
+                        <div class="g-12"></div>
+                        <div class="g-13"></div>
+                        <div class="g-14"></div>
+                        <div class="g-15"></div>
+                        <div class="g-16"></div>
+                        <div class="g-17"></div>
+                        <div class="g-18"></div>
+                        <div class="g-19"></div>
+                        <div class="g-20"></div>
                     </div>
                 </div>
-                <div class="horizontal">
-                    <p>Horizontal</p>
-                    <div class="sliderAndValue">
-                        <input type="range" max="150" min="0" value="50" class="horizontalSlider">
-                        <p class="horizontalSliderNum">50px</p>
+                <div class="filterControls tabColor">
+                    <p>Filter Controls</p>
+                    <div>
+                        <span class="range-field">
+                            <label for="brightnessSlider">
+                              Brightness
+                            </label>
+                            <input id="brightnessSlider"
+                                   type="range" value="100"
+                                   min="0" max="300">
+                            <p class="brightnessValue">100%</p>
+                        </span>
                     </div>
+                    <div>
+                        <span class="range-field">
+                            <label for="contrastSlider">
+                              Contrast
+                            </label>
+                            <input id="contrastSlider"
+                                   type="range" value="100"
+                                   min="0" max="200">
+                            <p class="contrastValue">100%</p>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="range-field">
+                            <label for="grayscaleSlider">
+                              Grayscale
+                            </label>
+                            <input id="grayscaleSlider" 
+                                   type="range" value="0"
+                                   min="0" max="100">
+                            <p class="grayscaleValue">0%</p>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="range-field">
+                            <label for="saturationSlider">
+                              Saturation
+                            </label>
+                            <input id="saturationSlider"
+                                   type="range" value="100"
+                                   min="0" max="300">
+                            <p class="saturationValue">100%</p>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="range-field">
+                            <label for="inversionSlider">
+                              Invert
+                            </label>
+                            <input id="inversionSlider"
+                                   type="range" value="0"
+                                   min="0" max="100">
+                            <p class="inversionValue">0%</p>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="range-field">
+                            <label for="Blur Slider">
+                              Blur Radius
+                            </label>
+                            <input id="blurRadiusSlider"
+                                   type="range" value="0"
+                                   min="0" max="10">
+                            <p class="blurValue">0px</p>
+                        </span>
+                    </div>
+                    <button class="resetBtn resetFilterBtn">Reset Filter Settings  <i class="ph-arrow-counter-clockwise"></i> </button>
                 </div>
             </div>
-            <div class="borderRadius">
-                <h3>Border Radius</h3>
-                <div class="bRadius">
-                    <div class="sliderAndValue">
-                        <input type="range" max="20" min="0" value="10" class="borderRadiusSlider">
-                        <p class="borderRadiusSliderNum">10px</p>
+
+            <div class="paddingAndBorderRadius">
+                <div class="paddingAndBorderRadiusTab">
+                    <button class="active">Padding</button>
+                    <button>Border Raduis</button>
+                    <button>Box Shadow</button>
+                </div>
+                <div class="active padandBorder">
+                    <h3>Padding</h3>
+                    <div class="vertical">
+                        <p>Vertical</p>
+                        <div class="sliderAndValue">
+                            <input type="range" max="150" min="0" value="50" class="verticalSlider">
+                            <p class="verticalSliderNum">50px</p>
+                        </div>
+                    </div>
+                    <div class="horizontal">
+                        <p>Horizontal</p>
+                        <div class="sliderAndValue">
+                            <input type="range" max="150" min="0" value="50" class="horizontalSlider">
+                            <p class="horizontalSliderNum">50px</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="boxShadowThickness">
-                <h3>Box Shadow Thickness</h3>
-                <div class="bRadius">
-                    <div class="sliderAndValue">
-                        <input type="range" max="100" min="0" value="30" class="boxShadowThicknessSlider">
-                        <p class="boxShadowThicknessSliderNum">30px</p>
+                <div class="borderRadius padandBorder">
+                    <h3>Border Radius</h3>
+                    <div class="bRadius">
+                        <div class="sliderAndValue">
+                            <input type="range" max="20" min="0" value="10" class="borderRadiusSlider">
+                            <p class="borderRadiusSliderNum">10px</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxShadowThickness padandBorder">
+                    <h3>Box Shadow Thickness</h3>
+                    <div class="bRadius">
+                        <div class="sliderAndValue">
+                            <input type="range" max="100" min="0" value="30" class="boxShadowThicknessSlider">
+                            <p class="boxShadowThicknessSliderNum">30px</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="filterControls">
+
+
+            <!-- <div class="filterControls tabColor">
                 <h3>Filter Controls</h3>
                 <div>
                     <span class="range-field">
@@ -204,7 +288,7 @@
                     </span>
                 </div>
                 <button class="resetBtn resetFilterBtn">Reset Filter Settings  <i class="ph-arrow-counter-clockwise"></i> </button>
-            </div>
+            </div> -->
 
             <div class="rotateAndFlipBtns">
                 <h3>Rotate and Flip</h3>

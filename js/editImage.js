@@ -28,6 +28,9 @@ const filterControls = document.querySelectorAll('.filterOptions input')
 
 const resetFilterBtn = document.querySelector('.resetFilterBtn')
 
+const padandBorderBtn = document.querySelectorAll('.paddingAndBorderRadiusTab button')
+const padandBorder = document.querySelectorAll('.padandBorder')
+
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
 })
@@ -361,6 +364,19 @@ tabButtons.forEach((tab, index) => {
         });
         tabButtons[index].classList.add('active')
         tabColors[index].classList.add('active')
+    })
+})
+
+padandBorderBtn.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        padandBorder.forEach(padandBorderItem => {
+            padandBorderItem.classList.remove('active')
+        });
+        padandBorderBtn.forEach(unselectedTab => {
+            unselectedTab.classList.remove('active')
+        });
+        padandBorderBtn[index].classList.add('active')
+        padandBorder[index].classList.add('active')
     })
 })
 
