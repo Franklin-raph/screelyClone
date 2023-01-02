@@ -215,7 +215,8 @@ input[type="file"] {
 .right{
     background-color: #2F3542;
     height: 100vh;
-    /* padding: 20px; */
+    position: relative;
+    right: 0;
     color: #fff;
     overflow: auto;
 }
@@ -297,6 +298,8 @@ input[type="file"] {
 input[type="range"]{
     cursor: pointer;
 }
+
+
 
 #EditorPageNav .navLinks{
     align-items: center;
@@ -519,7 +522,7 @@ input[type="range"]{
     right: 77%;
   }
 
-  .window, .colorSection, .padding, .borderRadius, .boxShadowThickness{
+  .window, .colorSection, .padding, .borderRadius, .boxShadowThickness, .filterControls{
     padding: 20px;
   }
 
@@ -570,6 +573,20 @@ input[type="range"]{
 .borderRadius{
     border-top: 1px solid rgb(148, 148, 148);
     border-bottom: 1px solid rgb(148, 148, 148);
+}
+
+.filterControls{
+    border-bottom: 1px solid rgb(148, 148, 148);
+}
+
+.filterControls div{
+    margin: 10px 0;
+}
+
+.range-field{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .boxShadowThickness{

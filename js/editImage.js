@@ -24,6 +24,7 @@ const imageBorderRadius = document.querySelectorAll('.bRadius')
 const noWindow = document.querySelector('.noWindow')
 const browserWindow = document.querySelector('.browserWindow')
 const plainWindow = document.querySelector('.plainWindow')
+const filterControls = document.querySelectorAll('.filterOptions input')
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
@@ -170,13 +171,43 @@ document.addEventListener('DOMContentLoaded', (e) => {
         // editingImage.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`
         boxShadowThicknessSliderNum.textContent = `${this.value}px`
     }
+
+    
+
+    let brightness = "100", saturation = "100", contrast = "100", grayscale = "0", inversion = "0", blurRadius = "0";
+    let rotate = 0, flipHorizontal = 1, flipVertical = 1;
+
+    document.getElementById("brightnessSlider").oninput = function(){
+        brightness = this.value
+        document.querySelector('.brightnessValue').textContent = this.value
+        editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px`;
+    }
+
+    document.getElementById("grayscaleSlider").oninput = function(){
+        grayscale = this.value
+        editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
+    }
+
+    document.getElementById("contrastSlider").oninput = function(){
+        contrast = this.value
+        editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
+    }
+
+    document.getElementById("saturationSlider").oninput = function(){
+        saturation = this.value
+        editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
+    }
+
+    document.getElementById("inversionSlider").oninput = function(){
+        inversion = this.value
+        editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
+    }
+
+    document.getElementById("blurRadiusSlider").oninput = function(){
+        blurRadius = this.value
+        editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
+    }
 });
-
-
-// function toggleShadow(){
-//     topBar.classList.toggle("box-shadow")
-//     Array.from(imageFrame.children)[1].classList.toggle('box-shadow')
-// }
 
 function clrStorage(){
     localStorage.removeItem('image')
