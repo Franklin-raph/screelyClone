@@ -522,7 +522,7 @@ input[type="range"]{
     right: 77%;
   }
 
-  .window, .colorSection, .padding, .borderRadius, .boxShadowThickness, .filterControls{
+  .window, .colorSection, .padding, .borderRadius, .boxShadowThickness, .filterControls, .rotateAndFlipBtns{
     padding: 20px;
   }
 
@@ -570,13 +570,23 @@ input[type="range"]{
     color: #fff;
 }
 
-.borderRadius{
+.borderRadius, .rotateAndFlipBtns{
     border-top: 1px solid rgb(148, 148, 148);
     border-bottom: 1px solid rgb(148, 148, 148);
 }
 
-.filterControls{
-    border-bottom: 1px solid rgb(148, 148, 148);
+.rotateAndFlipBtns div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.rotateAndFlipBtns button{
+    border: 1px solid #505050;
+    border-radius: 5px;
+    padding: 10px 20px;
+    /* flex: 1; */
 }
 
 .filterControls div{

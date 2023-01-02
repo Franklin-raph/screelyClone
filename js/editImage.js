@@ -26,6 +26,8 @@ const browserWindow = document.querySelector('.browserWindow')
 const plainWindow = document.querySelector('.plainWindow')
 const filterControls = document.querySelectorAll('.filterOptions input')
 
+const resetFilterBtn = document.querySelector('.resetFilterBtn')
+
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
 })
@@ -111,6 +113,8 @@ windowStyleBtns[3].addEventListener('click', ()=>{
 
 const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{location.reload()})
 
+
+
 document.addEventListener('DOMContentLoaded', (e) => {
     const imgUrl = localStorage.getItem('image')
 
@@ -171,40 +175,66 @@ document.addEventListener('DOMContentLoaded', (e) => {
         // editingImage.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`
         boxShadowThicknessSliderNum.textContent = `${this.value}px`
     }
-
     
-
+    
     let brightness = "100", saturation = "100", contrast = "100", grayscale = "0", inversion = "0", blurRadius = "0";
-    let rotate = 0, flipHorizontal = 1, flipVertical = 1;
+    let rotation = 0, flipHorizontal = 1, flipVertical = 1;
+
+    const angle = 90;
+    document.querySelector('.rotateImageClockWise').addEventListener('click', ()=>{
+        rotation = (rotation + angle) % 360;
+        imageFrame.style.transform = `rotate(${rotation}deg)`;
+    })
+
+    const reverseAngle = -90;
+    document.querySelector('.rotateImageAntiClockWise').addEventListener('click', ()=>{
+        rotation = (rotation + reverseAngle) % 360;
+        imageFrame.style.transform = `rotate(${rotation}deg)`;
+    })
+
+    resetFilterBtn.addEventListener('click', () =>{
+        editingImage.style.filter = `brightness(100%) saturate(100%) contrast(100%) grayscale(0%) invert(0%) blur(0px)`;
+        document.querySelector('.brightnessValue').textContent = `100%`
+        document.querySelector('.grayscaleValue').textContent = `0%`
+        document.querySelector('.contrastValue').textContent = `100%`
+        document.querySelector('.saturationValue').textContent = `100%`
+        document.querySelector('.inversionValue').textContent = `0%`
+        document.querySelector('.blurValue').textContent = `0px`
+    })
 
     document.getElementById("brightnessSlider").oninput = function(){
         brightness = this.value
-        document.querySelector('.brightnessValue').textContent = this.value
-        editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px`;
+        document.querySelector('.brightnessValue').textContent = `${this.value}%`
+        editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
     }
 
     document.getElementById("grayscaleSlider").oninput = function(){
         grayscale = this.value
+        document.querySelector('.grayscaleValue').textContent = `${this.value}%`
         editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
     }
 
     document.getElementById("contrastSlider").oninput = function(){
         contrast = this.value
+        document.querySelector('.contrastValue').textContent = `${this.value}%`
         editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
     }
 
     document.getElementById("saturationSlider").oninput = function(){
         saturation = this.value
+        document.querySelector('.saturationValue').textContent = `${this.value}%`
         editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
     }
 
     document.getElementById("inversionSlider").oninput = function(){
         inversion = this.value
+        document.querySelector('.inversionValue').textContent = `${this.value}%`
         editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
     }
 
     document.getElementById("blurRadiusSlider").oninput = function(){
         blurRadius = this.value
+        document.querySelector('.blurValue').textContent = `${this.value}px`
         editingImage.style.filter = `brightness(${brightness}%) saturate(${saturation}%) contrast(${contrast}%) grayscale(${grayscale}%) invert(${inversion}%) blur(${blurRadius}px)`;
     }
 });
