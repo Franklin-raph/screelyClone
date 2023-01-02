@@ -192,6 +192,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
         imageFrame.style.transform = `rotate(${rotation}deg)`;
     })
 
+    document.querySelector('.flipImageHorizontal').addEventListener('click', () => {
+        imageFrame.style.transform === "scaleX(-1)" ?  imageFrame.style.transform = "scaleX(1)" : imageFrame.style.transform = "scaleX(-1)"
+    })
+
+    document.querySelector('.flipImageVertical').addEventListener('click', () => {
+        imageFrame.style.transform === "scaleY(-1)" ? imageFrame.style.transform = "scaleY(1)" : imageFrame.style.transform = "scaleY(-1)"
+    })
+
     resetFilterBtn.addEventListener('click', () =>{
         editingImage.style.filter = `brightness(100%) saturate(100%) contrast(100%) grayscale(0%) invert(0%) blur(0px)`;
         document.querySelector('.brightnessValue').textContent = `100%`
