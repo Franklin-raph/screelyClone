@@ -294,11 +294,19 @@ input[type="range"]{
     cursor: pointer;
 }
 
-
-
 #EditorPageNav .navLinks{
     align-items: center;
     gap: 5px;
+}
+
+#EditorPageNav .navLinks{
+    cursor: pointer;
+    font-size: 26px;
+}
+
+#EditorPageNav p{
+    cursor: pointer;
+    font-size: 26px;
 }
 
 .ph-moon, .ph-selection-background{
