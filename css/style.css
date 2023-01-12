@@ -534,7 +534,7 @@ input[type="range"]{
     right: 77%;
   }
 
-  .window, .colorSection, .paddingAndBorderRadius, .rotateAndFlipBtns{
+  .window, .colorSection, .paddingAndBorderRadius, .rotateAndFlipBtns, .frameAndImageSize{
     padding: 20px;
   }
 
