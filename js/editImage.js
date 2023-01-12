@@ -29,7 +29,12 @@ const filterControls = document.querySelectorAll('.filterOptions input')
 const resetFilterBtn = document.querySelector('.resetFilterBtn')
 
 const padandBorderBtn = document.querySelectorAll('.paddingAndBorderRadiusTab button')
+const frameAndImageSizeBtns = document.querySelectorAll('.frameAndImageSize button')
 const padandBorder = document.querySelectorAll('.padandBorder')
+const rightBar = document.querySelector('.right')
+const frameandImageSizeTogle = document.querySelector('.frameandImageSizeTogle').addEventListener('click', () => {
+    document.querySelector('.frameAndImageSizeBtnContainer').classList.toggle('showframeandImageContainer')
+})
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
     document.querySelector('.windowTypeBtns').classList.toggle('hide')
@@ -117,7 +122,6 @@ windowStyleBtns[3].addEventListener('click', ()=>{
 const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{location.reload()})
 
 
-
 document.addEventListener('DOMContentLoaded', (e) => {
     const imgUrl = localStorage.getItem('image')
 
@@ -126,6 +130,53 @@ document.addEventListener('DOMContentLoaded', (e) => {
     imageFrame.appendChild(img)
 
     const editingImage = Array.from(imageFrame.children)[1]
+
+    console.log(editingImage)
+    frameAndImageSizeBtns[0].addEventListener('click', ()=> {
+        editingImage.style.width = '1600px'
+        editingImage.style.height = '900px'
+        editingImage.style.objectFit = 'cover'
+        rightBar.style.height = 'auto'
+    })
+
+    frameAndImageSizeBtns[1].addEventListener('click', ()=> {
+        editingImage.style.width = '1500px'
+        editingImage.style.height = '500px'
+    })
+
+    frameAndImageSizeBtns[2].addEventListener('click', ()=> {
+        editingImage.style.width = '1200px'
+        editingImage.style.height = '1200px'
+        editingImage.style.objectFit = 'cover'
+        rightBar.style.height = 'auto'
+    })
+    
+    frameAndImageSizeBtns[3].addEventListener('click', ()=> {
+        editingImage.style.width = '1584px'
+        editingImage.style.height = '396px'
+        editingImage.style.objectFit = 'cover'
+    })
+
+    frameAndImageSizeBtns[4].addEventListener('click', ()=> {
+        editingImage.style.width = '1080px'
+        editingImage.style.height = '1080px'
+        editingImage.style.objectFit = 'cover'
+        rightBar.style.height = 'auto'
+    })
+
+    frameAndImageSizeBtns[5].addEventListener('click', ()=> {
+        editingImage.style.width = '1080px'
+        editingImage.style.height = '1920px'
+        editingImage.style.objectFit = 'cover'
+        rightBar.style.height = 'auto'
+    })
+
+    frameAndImageSizeBtns[6].addEventListener('click', ()=> {
+        editingImage.style.width = '1280px'
+        editingImage.style.height = '720px'
+        editingImage.style.objectFit = 'cover'
+        rightBar.style.height = 'auto'
+    })
 
     editingImage.classList.add('box-shadow')
     topBar.classList.add('box-shadow')
