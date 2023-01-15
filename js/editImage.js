@@ -21,8 +21,8 @@ const tabButtons = document.querySelectorAll('.backgroundTab button');
 const tabColors = document.querySelectorAll('.tabColor')
 const gradientColorsDivs = document.querySelectorAll(".gradientColors div")
 const imageBorderRadius = document.querySelectorAll('.bRadius')
-// const noWindow = document.querySelector('.noWindow')
-// const browserWindow = document.querySelector('.browserWindow')
+const noWindow = document.querySelector('.noWindow')
+const browserWindow = document.querySelector('.browserWindow')
 const plainWindow = document.querySelector('.plainWindow')
 const filterControls = document.querySelectorAll('.filterOptions input')
 
@@ -36,13 +36,13 @@ const frameandImageSizeTogle = document.querySelector('.frameandImageSizeTogle')
     document.querySelector('.frameAndImageSizeBtnContainer').classList.toggle('showframeandImageContainer')
 })
 
-// document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
-//     document.querySelector('.windowTypeBtns').classList.toggle('hide')
-// })
+document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
+    document.querySelector('.windowTypeBtns').classList.toggle('hide')
+})
 
-// document.querySelector('.windowStylyeBtn').addEventListener("click", ()=>{
-//     document.querySelector('.windowStyleBtns').classList.toggle('hide')
-// })
+document.querySelector('.windowStylyeBtn').addEventListener("click", ()=>{
+    document.querySelector('.windowStyleBtns').classList.toggle('hide')
+})
 
 windowTypeBtns.forEach((windontypeBtn, index) => {
     windontypeBtn.addEventListener('click', ()=>{
@@ -59,65 +59,65 @@ windowTypeBtns.forEach((windontypeBtn, index) => {
     })
 })
 
-// windowStyleBtns.forEach((windonstyleBtn, index) => {
-//     windonstyleBtn.addEventListener('click', ()=>{
-//         windowStyleBtns.forEach(unselectedBtn => {
-//             unselectedBtn.classList.remove('activeWindowButton')
-//         })
-//         windowStyleBtns[index].classList.add("activeWindowButton")
-//     })
-// })
+windowStyleBtns.forEach((windonstyleBtn, index) => {
+    windonstyleBtn.addEventListener('click', ()=>{
+        windowStyleBtns.forEach(unselectedBtn => {
+            unselectedBtn.classList.remove('activeWindowButton')
+        })
+        windowStyleBtns[index].classList.add("activeWindowButton")
+    })
+})
 
-//   windowStyleBtns[0].addEventListener('click', ()=>{
-//     topBarSpan.forEach(span => {
-//         span.style.display = "none"
-//         topBar.style.display = "block"
-//     })
-// })
+  windowStyleBtns[0].addEventListener('click', ()=>{
+    topBarSpan.forEach(span => {
+        span.style.display = "none"
+        topBar.style.display = "block"
+    })
+})
 
-// windowStyleBtns[1].addEventListener('click', ()=>{
-//     topBarSpan.forEach(span => {
-//         topBarSpan[0].style.display = "inline-block"
-//         topBarSpan[1].style.display = "inline-block"
-//         topBarSpan[2].style.display = "inline-block"
+windowStyleBtns[1].addEventListener('click', ()=>{
+    topBarSpan.forEach(span => {
+        topBarSpan[0].style.display = "inline-block"
+        topBarSpan[1].style.display = "inline-block"
+        topBarSpan[2].style.display = "inline-block"
 
-//         topBarSpan[0].style.backgroundColor = "#FF5F56"
-//         topBarSpan[1].style.backgroundColor = "#FFBD2E"
-//         topBarSpan[2].style.backgroundColor = "#27C93F"
+        topBarSpan[0].style.backgroundColor = "#FF5F56"
+        topBarSpan[1].style.backgroundColor = "#FFBD2E"
+        topBarSpan[2].style.backgroundColor = "#27C93F"
 
-//         topBarSpan[0].style.border = "none"
-//         topBarSpan[1].style.border = "none"
-//         topBarSpan[2].style.border = "none"
-//     })
-// })
+        topBarSpan[0].style.border = "none"
+        topBarSpan[1].style.border = "none"
+        topBarSpan[2].style.border = "none"
+    })
+})
 
-// windowStyleBtns[2].addEventListener('click', ()=>{
-//     topBarSpan.forEach(span => {
-//         topBarSpan[0].style.display = "inline-block"
-//         topBarSpan[1].style.display = "inline-block"
-//         topBarSpan[2].style.display = "inline-block"
+windowStyleBtns[2].addEventListener('click', ()=>{
+    topBarSpan.forEach(span => {
+        topBarSpan[0].style.display = "inline-block"
+        topBarSpan[1].style.display = "inline-block"
+        topBarSpan[2].style.display = "inline-block"
 
-//         topBarSpan[0].style.backgroundColor = "#979799"
-//         topBarSpan[1].style.backgroundColor = "#979799"
-//         topBarSpan[2].style.backgroundColor = "#979799"
-//     })
-// })
+        topBarSpan[0].style.backgroundColor = "#979799"
+        topBarSpan[1].style.backgroundColor = "#979799"
+        topBarSpan[2].style.backgroundColor = "#979799"
+    })
+})
 
-// windowStyleBtns[3].addEventListener('click', ()=>{
-//     topBarSpan.forEach(span => {
-//         topBarSpan[0].style.display = "inline-block"
-//         topBarSpan[1].style.display = "inline-block"
-//         topBarSpan[2].style.display = "inline-block"
+windowStyleBtns[3].addEventListener('click', ()=>{
+    topBarSpan.forEach(span => {
+        topBarSpan[0].style.display = "inline-block"
+        topBarSpan[1].style.display = "inline-block"
+        topBarSpan[2].style.display = "inline-block"
 
-//         topBarSpan[0].style.backgroundColor = "#E8E8E8"
-//         topBarSpan[1].style.backgroundColor = "#E8E8E8"
-//         topBarSpan[2].style.backgroundColor = "#E8E8E8"
+        topBarSpan[0].style.backgroundColor = "#E8E8E8"
+        topBarSpan[1].style.backgroundColor = "#E8E8E8"
+        topBarSpan[2].style.backgroundColor = "#E8E8E8"
 
-//         topBarSpan[0].style.border = "1px solid #979799"
-//         topBarSpan[1].style.border = "1px solid #979799"
-//         topBarSpan[2].style.border = "1px solid #979799"
-//     })
-// })
+        topBarSpan[0].style.border = "1px solid #979799"
+        topBarSpan[1].style.border = "1px solid #979799"
+        topBarSpan[2].style.border = "1px solid #979799"
+    })
+})
 
 const solidBtn = document.querySelector('#solidBtn').addEventListener('click', ()=>{location.reload()})
 
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     img.src = imgUrl;
     imageFrame.appendChild(img)
 
-    const editingImage = Array.from(imageFrame.children)[0]
+    const editingImage = Array.from(imageFrame.children)[1]
 
     console.log(editingImage)
 
@@ -188,55 +188,54 @@ document.addEventListener('DOMContentLoaded', (e) => {
     })
 
     editingImage.classList.add('box-shadow')
-    // topBar.classList.add('box-shadow')
+    topBar.classList.add('box-shadow')
 
-    // editingImage.style.borderBottomLeftRadius = `10px`
-    // editingImage.style.borderBottomRightRadius = `10px`
-    editingImage.style.borderRadius = `10px`
+    editingImage.style.borderBottomLeftRadius = `10px`
+    editingImage.style.borderBottomRightRadius = `10px`
 
-    // noWindow.addEventListener('click', () => {
-    //     topBar.style.display = "none"
-    //     editingImage.style.borderTopLeftRadius = "10px"
-    //     editingImage.style.borderTopRightRadius = "10px"
-    // })
+    noWindow.addEventListener('click', () => {
+        topBar.style.display = "none"
+        editingImage.style.borderTopLeftRadius = "10px"
+        editingImage.style.borderTopRightRadius = "10px"
+    })
 
-    // browserWindow.addEventListener('click', () => {
-    //     topBar.style.display = "flex"
-    //     document.querySelector('.browserBar').style.display = "block"
-    //     editingImage.style.borderTopLeftRadius = "0"
-    //     editingImage.style.borderTopRightRadius = "0"
-    // })
+    browserWindow.addEventListener('click', () => {
+        topBar.style.display = "flex"
+        document.querySelector('.browserBar').style.display = "block"
+        editingImage.style.borderTopLeftRadius = "0"
+        editingImage.style.borderTopRightRadius = "0"
+    })
 
-    // plainWindow.addEventListener('click', () => {
-    //     topBar.style.display = "flex"
-    //     document.querySelector('.browserBar').style.display = "none"
-    //     editingImage.style.borderTopLeftRadius = "0"
-    //     editingImage.style.borderTopRightRadius = "0"
-    // })
+    plainWindow.addEventListener('click', () => {
+        topBar.style.display = "flex"
+        document.querySelector('.browserBar').style.display = "none"
+        editingImage.style.borderTopLeftRadius = "0"
+        editingImage.style.borderTopRightRadius = "0"
+    })
 
     borderRadiusSlider.oninput = function(){
         borderRadiusSliderNum.textContent = this.value + "px"
-        // topBar.style.borderTopRightRadius = `${this.value}px`
-        // topBar.style.borderTopLeftRadius = `${this.value}px`
-        // editingImage.style.borderBottomLeftRadius = `${this.value}px`
-        // editingImage.style.borderBottomRightRadius = `${this.value}px`
-        editingImage.style.borderRadius = `${this.value}px`
+        topBar.style.borderTopRightRadius = `${this.value}px`
+        topBar.style.borderTopLeftRadius = `${this.value}px`
+        editingImage.style.borderBottomLeftRadius = `${this.value}px`
+        editingImage.style.borderBottomRightRadius = `${this.value}px`
+        // editingImage.style.borderRadius = `${this.value}px`
 
-        // if(noWindow.classList.contains('activeWindowButton')){
-        //     editingImage.style.borderTopLeftRadius = `${this.value}px`
-        //     editingImage.style.borderTopRightRadius = `${this.value}px`
+        if(noWindow.classList.contains('activeWindowButton')){
+            editingImage.style.borderTopLeftRadius = `${this.value}px`
+            editingImage.style.borderTopRightRadius = `${this.value}px`
 
-        //     editingImage.style.borderTopLeftRadius = "10px !important"
-        // }else{
-        //     editingImage.style.borderTopLeftRadius = "0px"
-        //     editingImage.style.borderTopRightRadius = "0px"
-        // }
+            editingImage.style.borderTopLeftRadius = "10px !important"
+        }else{
+            editingImage.style.borderTopLeftRadius = "0px"
+            editingImage.style.borderTopRightRadius = "0px"
+        }
     }
     
     boxShadowThicknessSlider.oninput = function(){
-        // topBar.style.boxShadow = `3px 3px ${this.value}px rgba(0, 0, 0, .5)`
+        topBar.style.boxShadow = `3px 3px ${this.value}px rgba(0, 0, 0, .5)`
         editingImage.style.boxShadow = `3px 3px ${this.value}px rgba(0, 0, 0, .5)`
-        // topBar.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`
+        topBar.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`
         editingImage.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`
         boxShadowThicknessSliderNum.textContent = `${this.value}px`
     }

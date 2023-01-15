@@ -168,7 +168,7 @@ input[type="file"] {
   align-items: center;
   color: #fff;
   padding: 20px 150px;
-  position: fixed;
+  /* position: fixed; */
   z-index: 99;
   width: 100%;
 }
@@ -188,7 +188,7 @@ input[type="file"] {
   width: 75%;
   /* formely: 40%; */
   box-sizing: border-box;
-  margin: 10rem auto 2rem;
+  margin: 3rem auto 2rem;
   /* height: 70%; */
 }
 
@@ -226,20 +226,17 @@ input[type="file"] {
   right: 0;
   color: #fff;
   overflow: auto;
-  top: 10%;
-}
-
-body::-webkit-scrollbar {
-  /* width: 1px; */
+  top: 0;
 }
 
 .right::-webkit-scrollbar {
   width: 1px;
+  display: none;
 }
 
 .right::-webkit-scrollbar-track {
   background: #ffffff;
-  width: 5px;
+  width: 1px;
 }
 
 .right::-webkit-scrollbar-thumb {
@@ -775,6 +772,10 @@ input[type="range"] {
   .resetFilterBtn {
     max-width: 42%;
   }
+
+  #EditorPageNav {
+    padding: 20px 30px;
+  }
 }
 
 @media screen and (max-width:480px) {
@@ -807,7 +808,11 @@ input[type="range"] {
   #EditorPageNav {
     justify-content: space-between;
     padding: 20px 15px;
-    font-size: 20px;
+  }
+
+  #EditorPageNav p,
+  #EditorPageNav i {
+    font-size: 3px;
   }
 
   .resetFilterBtn {
