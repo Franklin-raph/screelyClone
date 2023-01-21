@@ -32,8 +32,12 @@ const padandBorderBtn = document.querySelectorAll('.paddingAndBorderRadiusTab bu
 const frameAndImageSizeBtns = document.querySelectorAll('.frameAndImageSize button')
 const padandBorder = document.querySelectorAll('.padandBorder')
 const rightBar = document.querySelector('.right')
-const frameandImageSizeTogle = document.querySelector('.frameandImageSizeTogle').addEventListener('click', () => {
-    document.querySelector('.frameAndImageSizeBtnContainer').classList.toggle('showframeandImageContainer')
+document.querySelector('.frameandImageSizeTogle').addEventListener('click', () => {
+    document.querySelector('.imageSizeToggleModal').style.display = "flex"
+})
+
+document.querySelector('.topModel .ph-x').addEventListener('click', () => {
+    document.querySelector('.imageSizeToggleModal').style.display = "none"
 })
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{

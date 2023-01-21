@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screely - Generate Website Mockups</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -64,6 +65,11 @@
                     <div class="icons">
                         <i class="ph-moon" onclick="toggleMode()"></i>
                     </div>
+                </div>
+
+
+                <div class="frameandImageSizeTogle">
+                    <h3>Choose a model</h3>
                 </div>
             </div>
             <div class="colorSection">
@@ -228,56 +234,63 @@
                 </div>
             </div>
 
-            <div class="frameAndImageSize">
-                <div class="frameandImageSizeTogle">
-                    <h3>Choose a model</h3>
-                    <i class="ph-caret-down"></i>
-                </div>
+            <button class="downloadImage">Download <i class="ph-download-simple"></i> </button>
+            <button class="resetBtn" onclick="resetEdit()">Reset <i class="ph-arrow-counter-clockwise"></i> </button>
+        </div>
+
+        <div class="frameAndImageSize">
+            <div class="imageSizeToggleModal">
                 <div class="frameAndImageSizeBtnContainer">
+                    <div class="topModel">
+                        <p>Choose a model</p>
+                        <i class="ph-x"></i>
+                    </div>
+                    <p class="modelText">Choose the appropriate model to format your image in the correct social media dimensions.</p>
                     <button class="">
-                        <i class="ph-twitter-logo"></i>
+                        <i class="ri-twitter-fill"></i>
                         <div>
                             <p>Twitter - Tweet</p>
                             <p>1600x900</p>
                         </div>
                     </button>
                     <button class="">
-                        <i class="ph-twitter-logo"></i>
+                        <i class="ri-twitter-fill"></i>
                         <div>
                             <p>Twitter - Banner</p>
                             <p>1500x500</p>
                         </div>
                     </button>
                     <button class="">
-                        <i class="ph-linkedin-logo"></i>
+                        <i class="ri-linkedin-box-fill"></i>
                         <div>
                             <p>Linkedln - Post</p>
                             <p>1200x1200</p>
                         </div>
                     </button>
                     <button class="">
-                        <i class="ph-linkedin-logo"></i>
+                        <i class="ri-linkedin-box-fill"></i>
                         <div>
                             <p>Linkedln - Banner</p>
                             <p>1584x396</p>
                         </div>
                     </button>
                     <button class="">
-                        <i class="ph-instagram-logo"></i>
+                        <!-- <i class="ri-instagram-fill"></i> -->
+                        <img src="./assets/Instagram-Glyph-Color-Logo.wine.svg" alt="">
                         <div>
                             <p>Instagram - Photo</p>
                             <p>1080x1080</p>
                         </div>
                     </button>
                     <button class="">
-                        <i class="ph-instagram-logo"></i>
+                        <img src="./assets/Instagram-Glyph-Color-Logo.wine.svg" alt="">
                         <div>
                             <p>Instagram - Story</p>
                             <p>1080x1920</p>
                         </div>
                     </button>
                     <button class="">
-                        <i class="ph-youtube-logo"></i>
+                        <i class="ri-youtube-fill"></i>
                         <div>
                             <p>Youtue - Thumbnail</p>
                             <p>1280x720</p>
@@ -285,9 +298,6 @@
                     </button>
                 </div>
             </div>
-
-            <button class="downloadImage">Download <i class="ph-download-simple"></i> </button>
-            <button class="resetBtn" onclick="resetEdit()">Reset <i class="ph-arrow-counter-clockwise"></i> </button>
         </div>
     </div>
     
