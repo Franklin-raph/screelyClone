@@ -38,6 +38,7 @@ document.querySelector('.frameandImageSizeTogle').addEventListener('click', () =
 
 document.querySelector('.topModel .ph-x').addEventListener('click', () => {
     document.querySelector('.imageSizeToggleModal').style.display = "none"
+    document.querySelector('html').style.overflowY = "visible"
 })
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{

@@ -169,9 +169,11 @@ input[type="file"] {
   border-bottom: 1px solid #c9c9c9;
   color: #242c3d;
   padding: 20px 150px;
-  /* position: fixed; */
+  /* position: static; */
+  position: fixed;
   z-index: 99;
   width: 100%;
+  background-color: #fff;
 }
 
 .editingSpace {
@@ -189,7 +191,7 @@ input[type="file"] {
   width: 75%;
   /* formely: 40%; */
   box-sizing: border-box;
-  margin: 3rem auto 2rem;
+  margin: 6rem auto 2rem;
   /* height: 70%; */
 }
 
@@ -228,7 +230,8 @@ input[type="file"] {
   color: #242c3d;
   overflow: auto;
   top: 0;
-  padding-bottom: 5rem;
+  padding: 5rem 0 2rem;
+  /* margin-bottom: 25rem; */
 }
 
 .right::-webkit-scrollbar {
@@ -659,6 +662,8 @@ input[type="range"] {
   max-width: 65%;
 }
 
+.frameAndImageSize {}
+
 .frameAndImageSize button {
   display: flex;
   align-items: center;
@@ -812,6 +817,10 @@ input[type="range"] {
 
   .resetFilterBtn {
     max-width: 20%;
+  }
+
+  .frameAndImageSizeBtnContainer {
+    width: 78%;
   }
 }
 
