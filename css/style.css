@@ -162,11 +162,12 @@ input[type="file"] {
 }
 
 #EditorPageNav {
-  background: linear-gradient(to right, rgb(6, 115, 228), rgb(20, 57, 182));
+  /* background: linear-gradient(to right, rgb(6, 115, 228), rgb(20, 57, 182)); */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  border-bottom: 1px solid #c9c9c9;
+  color: #242c3d;
   padding: 20px 150px;
   /* position: fixed; */
   z-index: 99;
@@ -183,7 +184,7 @@ input[type="file"] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #c90b34;
+  background-color: #98B0FC;
   padding: 40px;
   width: 75%;
   /* formely: 40%; */
@@ -215,16 +216,16 @@ input[type="file"] {
 }
 
 .left {
-  background-color: #fff;
+  background-color: #dfecff;
   position: relative;
 }
 
 .right {
-  background-color: #2F3542;
+  background-color: #fff;
   height: 100vh;
   position: relative;
   right: 0;
-  color: #fff;
+  color: #242c3d;
   overflow: auto;
   top: 0;
   padding-bottom: 5rem;
@@ -248,7 +249,7 @@ input[type="file"] {
 
 .right h3 {
   font-weight: 400;
-  font-size: 25px;
+  font-size: 16px;
   margin-bottom: 15px;
 }
 
@@ -272,6 +273,7 @@ input[type="file"] {
   padding: 12px 15px;
   border-radius: 5px;
   cursor: pointer;
+  color: #fff;
 }
 
 .resetBtn {
@@ -279,6 +281,7 @@ input[type="file"] {
   border-radius: 5px;
   cursor: pointer;
   background-color: #C90B34;
+  color: #fff;
 }
 
 .text {
@@ -384,8 +387,8 @@ input[type="range"] {
 
 .backgroundTab button.active,
 .paddingAndBorderRadiusTab button.active {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #EEF4FF;
+  color: #494CE9;
 }
 
 .backgroundTab button.active:last-child,
@@ -651,15 +654,6 @@ input[type="range"] {
 
 .resetFilterBtn {
   max-width: 65%;
-}
-
-.right h3 {
-  font-size: 20px;
-}
-
-.frameAndImageSize {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); */
-  /* background-color: red; */
 }
 
 .frameAndImageSize button {

@@ -324,7 +324,7 @@ function clrStorage(){
 const pickr = Pickr.create({
     el: '.color-picker',
     theme: 'monolith', // or 'monolith', or 'nano' or 'classic'
-    default: '#C90B34',
+    default: '#98B0FC',
 
     swatches: [
         'rgba(244, 67, 54, 1)',
