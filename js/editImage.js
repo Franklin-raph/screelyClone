@@ -38,7 +38,7 @@ document.querySelector('.frameandImageSizeTogle').addEventListener('click', () =
 
 document.querySelector('.topModel .ph-x').addEventListener('click', () => {
     document.querySelector('.imageSizeToggleModal').style.display = "none"
-    document.querySelector('html').style.overflowY = "visible"
+    // document.querySelector('html').style.overflowY = "visible"
 })
 
 document.querySelector(".windowTypeBtn").addEventListener("click", ()=>{
@@ -128,7 +128,7 @@ const solidBtn = document.querySelector('#solidBtn').addEventListener('click', (
 
 function resetImageFrame(){
     imageFrame.style.height = "70%"
-    imageFrame.style.marginTop = "10rem"
+    // imageFrame.style.marginTop = "10rem"
 }
 
 document.addEventListener('DOMContentLoaded', (e) => {
@@ -181,8 +181,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
         editingImage.style.width = '56.25vw'
         editingImage.style.height = '90vh'
         editingImage.style.objectFit = 'cover'
-        imageFrame.style.height = "80vh"
-        imageFrame.style.marginTop = "6rem"
+        resetImageFrame()
+        // imageFrame.style.height = "80vh"
+        // imageFrame.style.marginTop = "6rem"
     })
 
     frameAndImageSizeBtns[6].addEventListener('click', ()=> {

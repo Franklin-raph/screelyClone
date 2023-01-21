@@ -170,7 +170,7 @@ input[type="file"] {
   color: #242c3d;
   padding: 20px 150px;
   /* position: static; */
-  position: fixed;
+  /* position: fixed; */
   z-index: 99;
   width: 100%;
   background-color: #fff;
@@ -191,7 +191,7 @@ input[type="file"] {
   width: 75%;
   /* formely: 40%; */
   box-sizing: border-box;
-  margin: 6rem auto 2rem;
+  margin: 2rem auto 2rem;
   /* height: 70%; */
 }
 
@@ -230,7 +230,7 @@ input[type="file"] {
   color: #242c3d;
   overflow: auto;
   top: 0;
-  padding: 5rem 0 2rem;
+  padding: .5rem 0 4rem;
   /* margin-bottom: 25rem; */
 }
 
@@ -809,6 +809,14 @@ input[type="range"] {
 
   .editingSpace {
     grid-template-columns: 6fr;
+  }
+
+  .modelText {
+    display: none;
+  }
+
+  .topModel {
+    padding-bottom: 10px;
   }
 
   .right::-webkit-scrollbar {
