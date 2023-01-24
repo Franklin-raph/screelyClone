@@ -25,6 +25,7 @@ const noWindow = document.querySelector('.noWindow')
 const browserWindow = document.querySelector('.browserWindow')
 const plainWindow = document.querySelector('.plainWindow')
 const filterControls = document.querySelectorAll('.filterOptions input')
+const topBarWidth = document.querySelector('.topBarWidth')
 
 const resetFilterBtn = document.querySelector('.resetFilterBtn')
 
@@ -136,12 +137,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     const img = new Image();
     img.src = imgUrl;
+    // topBar.style.width = `${img.Width}px`
+
+    topBarWidth.oninput = function(){
+        topBar.style.width = this.value + "px"
+        document.querySelector(".topBarWidthSliderNum").textContent = this.value + "px"
+        console.log(this.value)
+    }
+
     imageFrame.appendChild(img)
 
     const editingImage = Array.from(imageFrame.children)[1]
-
-    console.log(editingImage)
-
 
     frameAndImageSizeBtns[0].addEventListener('click', ()=> {
         editingImage.style.width = '83.33vw'
