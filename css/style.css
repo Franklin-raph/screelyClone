@@ -26,16 +26,18 @@ button {
 }
 
 #hero {
-  background: linear-gradient(to right, rgb(6, 115, 228), rgb(20, 57, 182));
-  height: 90vh;
-  clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+  /* background: linear-gradient(to right, rgb(6, 115, 228), rgb(20, 57, 182)); */
+  height: 100vh;
+  /* clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%); */
+  background-color: #455794;
 }
 
 .navbar {
+  background-color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px 0 70px;
+  padding: 20px 70px;
 }
 
 .navbar a {
@@ -58,12 +60,13 @@ button {
   align-items: center;
   justify-content: center;
   color: #fff;
+  margin-top: 5rem;
 }
 
 .heroText h1 {
   font-size: 40px;
   font-weight: 600;
-  width: 38%;
+  width: 40%;
   margin: 20px auto;
   text-align: center;
 }

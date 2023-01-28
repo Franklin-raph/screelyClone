@@ -10,7 +10,7 @@ function editImage(e) {
     fr.readAsDataURL(e.target.files[0])
     fr.addEventListener('load', ()=>{
         const url = fr.result;
-        localStorage.setItem('image', url)                         
+        localStorage.setItem('image', url)
         setTimeout(function(){
             location.href = "/editor.html"
         }, 50);
