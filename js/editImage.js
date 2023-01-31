@@ -139,8 +139,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   const img = new Image();
   img.src = imgUrl;
-  //   console.log(imgUrl);
-  topBar.style.width = `${img.width}px`;
+  //   img.width = 70% console.log(img.width);
 
   window.onload = function () {
     if (!window.location.hash) {
@@ -158,6 +157,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
   imageFrame.appendChild(img);
 
   const editingImage = Array.from(imageFrame.children)[1];
+  editingImage.style.maxWidth = "70%";
+  editingImage.style.height = "70vh";
+  topBar.style.width = "70%";
 
   frameAndImageSizeBtns[0].addEventListener("click", () => {
     editingImage.style.width = "83.33vw";
