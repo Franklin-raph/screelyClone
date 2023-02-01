@@ -191,11 +191,11 @@ input[type="file"] {
   flex-direction: column;
   background-color: #98B0FC;
   padding: 40px;
-  width: 90%;
+  width: 75%;
   /* formely: 40%; */
   box-sizing: border-box;
   margin: 2rem auto 2rem;
-  height: 80vh;
+  /* height: 70%; */
 }
 
 .imageFrame2 {
@@ -215,10 +215,10 @@ input[type="file"] {
   width: 100%;
 }
 
-/* .imageFrame img {
+.imageFrame img {
   max-width: 100%;
-  max-height: 50% !important;
-} */
+  height: 50%;
+}
 
 .left {
   background-color: #dfecff;
@@ -307,7 +307,7 @@ input[type="file"] {
 
 .box-shadow {
   /* box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 10px 22px rgb(0 0 0 / 20%); */
-  /* box-shadow: 3px 3px 30px rgba(0, 0, 0, .5); */
+  box-shadow: 3px 3px 30px rgba(0, 0, 0, .5);
 }
 
 input[type="range"] {
@@ -681,6 +681,8 @@ input[type="range"] {
 .resetFilterBtn {
   max-width: 65%;
 }
+
+.frameAndImageSize {}
 
 .frameAndImageSize button {
   display: flex;
