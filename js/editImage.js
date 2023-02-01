@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   });
 
   editingImage.classList.add("box-shadow");
-  topBar.classList.add("box-shadow");
+  // topBar.classList.add("box-shadow");
 
   editingImage.style.borderBottomLeftRadius = `10px`;
   editingImage.style.borderBottomRightRadius = `10px`;
@@ -247,9 +247,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
   };
 
   boxShadowThicknessSlider.oninput = function () {
-    topBar.style.boxShadow = `3px 3px ${this.value}px rgba(0, 0, 0, .5)`;
+    // topBar.style.boxShadow = `3px 3px ${this.value}px rgba(0, 0, 0, .5)`;
     editingImage.style.boxShadow = `3px 3px ${this.value}px rgba(0, 0, 0, .5)`;
-    topBar.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`;
+    // topBar.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`;
     editingImage.style.boxShadow = `0 3px ${this.value}px rgb(0 0 0 / 10%), 0 10px ${this.value}px rgb(0 0 0 / 20%)`;
     boxShadowThicknessSliderNum.textContent = `${this.value}px`;
   };
