@@ -682,8 +682,6 @@ input[type="range"] {
   max-width: 65%;
 }
 
-.frameAndImageSize {}
-
 .frameAndImageSize button {
   display: flex;
   align-items: center;
