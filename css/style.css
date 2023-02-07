@@ -212,7 +212,7 @@ input[type="file"] {
 }
 
 .imageFrame .topBar {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .imageFrame img {
