@@ -971,10 +971,6 @@ input[type="range"] {
   border-radius: 20px;
 }
 
-#about h1 {
-  margin-bottom: 3rem;
-}
-
 #about .aboutDiv1 h3,
 #about .aboutDiv2 h3 {
   margin: 30px 0 7px;
@@ -987,6 +983,7 @@ input[type="range"] {
   margin: 30px 0 7px;
   font-size: 1.4rem;
   color: rgb(97, 97, 97);
+  line-height: 1.5;
 }
 
 #about .custom-file-upload_heroTextArea {
@@ -1002,9 +999,14 @@ footer {
   padding: 50px 50px 30px;
 }
 
-footer .contactContainer,
 footer .linksContainer {
   text-align: center;
+}
+
+footer .contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 footer a {
@@ -1021,10 +1023,15 @@ footer .links {
   margin-top: 20px;
 }
 
-footer .contacts a {
+footer .contacts {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-top: 1rem;
+}
+
+footer i {
+  font-size: 18px;
 }
 
 footer .contacts a div {
@@ -1274,6 +1281,14 @@ footer .contacts a div {
     transition: .5s;
   }
 
+  .heroSection {
+    padding: 12px;
+  }
+
+  .navbar {
+    padding: 16px;
+  }
+
   #hero .navLinks a {
     color: #000000;
   }
@@ -1309,7 +1324,12 @@ footer .contacts a div {
   }
 
   #features .featuresContainer .feature i {
-    padding: 5px;
+    padding: 9px;
+  }
+
+  #about .aboutDiv1,
+  #about .aboutDiv2 {
+    padding: 20px 10px;
   }
 
   #features p {
@@ -1320,5 +1340,19 @@ footer .contacts a div {
   #about .aboutDiv1 img,
   #about .aboutDiv2 img {
     width: 95%;
+  }
+
+  #features h1,
+  #about h1 {
+    margin: 0 0 12px;
+  }
+
+  footer .links {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  footer .links span {
+    display: none;
   }
 }
