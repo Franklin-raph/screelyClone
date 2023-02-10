@@ -703,7 +703,7 @@ input[type="range"] {
 
 .toggler i {
   font-size: 30px;
-  color: #fff;
+  color: rgb(102, 102, 102);
 }
 
 .rotateAndFlipBtns {
@@ -1264,6 +1264,39 @@ footer .contacts a div {
   .heroText h1 {
     font-size: 35px;
   }
+
+  .toggler {
+    display: block;
+    cursor: pointer;
+  }
+
+  #hero .navLinks {
+    position: fixed;
+    flex-direction: column;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #1D1E23;
+    width: 100%;
+    /* padding: 4rem 0; */
+    z-index: 9;
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+  }
+
+  #hero {
+    clip-path: none;
+  }
+
+  #hero .navLinks a {
+    color: #fff;
+  }
+
+  #navClose {
+    display: none;
+  }
 }
 
 @media screen and (max-width:480px) {
@@ -1291,14 +1324,6 @@ footer .contacts a div {
 
   #hero .navLinks a {
     color: #000000;
-  }
-
-  .toggler {
-    display: block;
-  }
-
-  #navClose {
-    display: none;
   }
 
   #EditorPageNav {

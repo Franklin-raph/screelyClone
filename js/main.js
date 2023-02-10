@@ -19,13 +19,15 @@ function editImage(e) {
 }
 
 navOpen.addEventListener("click", () => {
-    navLink.style.top = "30%"
+    navLink.style.maxHeight = "100%"
+    navLink.style.padding = "4rem 0"
     navOpen.style.display = "none"
     navClose.style.display = "block"
 })
 
 navClose.addEventListener("click", () => {
-    navLink.style.top = "-30%"
+    navLink.style.maxHeight = "0"
+    navLink.style.padding = "0"
     navOpen.style.display = "block"
     navClose.style.display = "none"
 })
