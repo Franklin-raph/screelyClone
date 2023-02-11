@@ -1285,7 +1285,7 @@ footer .contacts a div {
   #hero .navLinks {
     position: fixed;
     flex-direction: column;
-    top: 31%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -1312,9 +1312,9 @@ footer .contacts a div {
     padding: 12px;
   }
 
-  .navbar {
+  /* .navbar {
     padding: 16px;
-  }
+  } */
 
   #EditorPageNav {
     justify-content: space-between;
