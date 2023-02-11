@@ -1285,7 +1285,7 @@ footer .contacts a div {
   #hero .navLinks {
     position: fixed;
     flex-direction: column;
-    top: 39%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
