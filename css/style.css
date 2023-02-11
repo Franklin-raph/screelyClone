@@ -1285,7 +1285,7 @@ footer .contacts a div {
   #hero .navLinks {
     position: fixed;
     flex-direction: column;
-    top: 33%;
+    top: 39%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -1303,6 +1303,10 @@ footer .contacts a div {
 
   #hero {
     clip-path: none;
+  }
+
+  .logo {
+    font-size: 18px !important;
   }
 }
 
