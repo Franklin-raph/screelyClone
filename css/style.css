@@ -58,20 +58,22 @@ button {
 }
 
 .heroSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-between;
+  align-items: center; */
+  text-align: center;
   padding: 20px 70px;
 }
 
 .heroText {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: center; */
+  text-align: center;
   color: #202020;
-  margin-top: 10rem;
-  width: 38%;
+  margin: 7rem 0 5rem;
+  /* width: 38%; */
 }
 
 .heroText h1 {
@@ -86,14 +88,14 @@ button {
   line-height: 1.7;
 }
 
-.heroBox {
+/* .heroBox {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 50px auto 0;
   margin-top: 10rem;
-}
+} */
 
 .mainBox1 {
   background-color: rgb(255, 255, 255);
@@ -205,10 +207,9 @@ input[type="file"] {
   gap: 7px;
   padding: 14px 22px;
   cursor: pointer;
-  margin-top: 20px;
   background-color: #1ac888;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 12px;
 }
 
 .custom-file-upload {
@@ -1044,12 +1045,118 @@ footer .contacts a div {
   gap: 3px;
 }
 
+.heroBox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.heroBox>div:first-child {
+  width: 52%;
+  height: 20em;
+  background-color: rgb(187, 221, 251);
+  border-radius: 1em;
+}
+
+.heroBox>div:nth-child(3) {
+  background-color: white;
+  padding-top: 2em;
+  border-radius: 1em;
+  width: 40%;
+  /* height: 26em; */
+}
+
+.heroBox>div:nth-child(2) {
+  padding: 10px 14px;
+  background-color: white;
+  margin-top: -22em;
+  margin-bottom: 2em;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroBox>div:nth-child(2) {
+  border: 2.5px solid transparent;
+}
+
+.heroBox>div:nth-child(2):hover {
+  border: 2.5px solid rgb(187, 221, 251);
+}
+
+.heroBox>div:nth-child(2)>button {
+  width: 10em;
+  height: 3em;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  background-color: #005DFF;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.heroBox>div:nth-child(2)>button:hover {
+  transform: translate(0, 2px);
+}
+
+.heroBox>div:nth-child(3) img {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  width: 100%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dots-bar {
+  display: flex;
+  gap: 0.8em;
+  margin-top: -1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+.dots {
+  width: 0.8em;
+  height: 0.8em;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.users>h2 {
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 3rem 0 2rem;
+}
+
+.users .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.users .flex i {
+  font-size: 1.8rem;
+}
+
 @media screen and (max-width:1200px) {
 
   html,
   body {
     /* overflow-x: hidden; */
     overflow: hidden auto;
+  }
+
+  .heroBox>div:first-child {
+    width: 60%;
+  }
+
+  .heroBox>div:nth-child(3) {
+    width: 48%;
   }
 
   #features .featuresContainer {
@@ -1091,6 +1198,14 @@ footer .contacts a div {
     padding: 20px 50px;
   }
 
+  .heroBox>div:first-child {
+    width: 68%;
+  }
+
+  .heroBox>div:nth-child(3) {
+    width: 56%;
+  }
+
   .mainBox1 {
     margin-top: 0;
   }
@@ -1128,7 +1243,7 @@ footer .contacts a div {
   }
 
   #hero {
-    height: 98vh;
+    /* height: 98vh; */
   }
 
   .heroText h1 {
@@ -1146,6 +1261,10 @@ footer .contacts a div {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  footer .contactContainer {
+    align-items: center;
   }
 
   footer .links {
@@ -1168,9 +1287,17 @@ footer .contacts a div {
   }
 
   .heroText {
-    width: 80%;
+    /* width: 80%; */
     text-align: center;
     align-items: center;
+  }
+
+  .heroBox>div:first-child {
+    width: 86%;
+  }
+
+  .heroBox>div:nth-child(3) {
+    width: 68%;
   }
 
   .mainBox1 {
@@ -1234,6 +1361,14 @@ footer .contacts a div {
     font-size: 25px;
   }
 
+  .heroBox>div:first-child {
+    width: 92%;
+  }
+
+  .heroBox>div:nth-child(3) {
+    width: 72%;
+  }
+
   .mainBox2 {
     width: 90%;
     text-align: center;
@@ -1262,7 +1397,7 @@ footer .contacts a div {
 
   .heroText {
     width: 100%;
-    margin-top: 0;
+    /* margin-top: 0; */
   }
 
   .heroText h1 {
@@ -1314,6 +1449,14 @@ footer .contacts a div {
 
   .heroSection {
     padding: 12px;
+  }
+
+  .heroBox>div:first-child {
+    width: 100%;
+  }
+
+  .heroBox>div:nth-child(3) {
+    width: 90%;
   }
 
   .navbar {
