@@ -1138,6 +1138,20 @@ footer .contacts a div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.users .flex img {
+  width: 3%;
+  filter: grayscale(1);
+  transition: .5s;
+}
+
+.users .flex img:hover {
+  width: 3%;
+  filter: grayscale(0);
+  transition: .5s;
 }
 
 .users .flex i {
@@ -1158,6 +1172,10 @@ footer .contacts a div {
 
   .heroBox>div:nth-child(3) {
     width: 48%;
+  }
+
+  .users .flex img {
+    width: 4%;
   }
 
   #features .featuresContainer {
@@ -1301,6 +1319,10 @@ footer .contacts a div {
     width: 68%;
   }
 
+  .users .flex img {
+    width: 5%;
+  }
+
   .mainBox1 {
     width: 78vw;
     height: 65vh;
@@ -1349,7 +1371,7 @@ footer .contacts a div {
   }
 
   .navbar {
-    padding: 30px;
+    padding: 15px 30px;
   }
 
   .resetFilterBtn {
@@ -1368,6 +1390,10 @@ footer .contacts a div {
 
   .heroBox>div:nth-child(3) {
     width: 72%;
+  }
+
+  .users .flex img {
+    width: 6%;
   }
 
   .mainBox2 {
@@ -1458,6 +1484,10 @@ footer .contacts a div {
 
   .heroBox>div:nth-child(3) {
     width: 90%;
+  }
+
+  .users .flex img {
+    width: 8%;
   }
 
   .navbar {
