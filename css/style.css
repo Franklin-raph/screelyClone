@@ -1486,6 +1486,10 @@ footer .contacts a div {
     width: 90%;
   }
 
+  .users .flex {
+    width: 90%;
+  }
+
   .users .flex img {
     width: 8%;
   }
