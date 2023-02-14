@@ -296,6 +296,7 @@ input[type="file"] {
 .left {
   background-color: #dfecff;
   position: relative;
+  padding-top: 5rem;
 }
 
 .right {
@@ -306,7 +307,7 @@ input[type="file"] {
   color: #242c3d;
   overflow: auto;
   top: 0;
-  padding: .5rem 0 4rem;
+  padding: 5rem 0 4rem;
   /* margin-bottom: 25rem; */
 }
 
