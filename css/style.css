@@ -28,7 +28,7 @@ button {
   /* background: linear-gradient(to right, rgb(6, 115, 228), rgb(20, 57, 182)); */
   /* height: 90vh; */
   /* clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%); */
-  background-color: #f5f3f3;
+  background-color: #EDEDED;
   padding-bottom: 4rem;
 }
 
@@ -895,12 +895,14 @@ input[type="range"] {
 
 #features {
   padding: 5rem 0;
+  background-color: #005DFF;
 }
 
 #features h1,
 #about h1 {
   text-align: center;
-  color: #1ac888;
+  color: #fff;
+  /* color: #1ac888; */
   font-size: 2em;
   text-transform: uppercase;
   margin: 4rem 0px 12px;
@@ -911,8 +913,8 @@ input[type="range"] {
   width: 50%;
   margin: 0 auto 4rem;
   text-align: center;
-  color: #616161;
-  color: #616161;
+  /* color: #616161; */
+  color: #fff;
 }
 
 #features .featuresContainer {
@@ -925,7 +927,8 @@ input[type="range"] {
 }
 
 #features .featuresContainer p {
-  color: #616161;
+  /* color: #616161; */
+  color: #fff;
   font-size: 18px;
   margin-top: 7px;
   line-height: 1.6;
@@ -933,28 +936,32 @@ input[type="range"] {
 
 #features .featuresContainer .feature {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   justify-content: center;
+  flex-direction: column;
   gap: 15px;
   width: 100%;
 }
 
 #features .featuresContainer .feature h3 {
   font-size: 20px;
-  color: #00274e;
+  /* color: #00274e; */
+  color: #fff;
+  margin: 10px 0;
 }
 
 #features .featuresContainer .feature i {
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   color: #1380ED;
-  padding: 12px;
+  /* padding: 12px; */
   border-radius: 5px;
   color: #ffffff;
-  background-color: #1ac888;
+  /* background-color: #1ac888; */
 }
 
 #about {
-  background-color: #F5F3F3;
+  background-color: #EDEDED;
   padding: 5rem 0;
 }
 
@@ -962,9 +969,9 @@ input[type="range"] {
 #about .aboutDiv2 {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  gap: 50px;
-  padding: 20px 90px;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 20px 150px;
 }
 
 #about .aboutDiv1 {
@@ -1143,13 +1150,12 @@ footer .contacts a div {
 }
 
 .users .flex img {
-  width: 3%;
+  width: 5%;
   filter: grayscale(1);
   transition: .5s;
 }
 
 .users .flex img:hover {
-  width: 3%;
   filter: grayscale(0);
   transition: .5s;
 }
