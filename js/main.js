@@ -1,5 +1,5 @@
 const input = document.querySelector('input');
-const navOpen = document.querySelector(".ph-list")
+const navOpen = document.querySelector("#navOpen")
 const navClose = document.querySelector(".ph-x-circle")
 const navLink = document.querySelector("#hero .navLinks")
 

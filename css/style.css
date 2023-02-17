@@ -25,9 +25,6 @@ button {
 }
 
 #hero {
-  /* background: linear-gradient(to right, rgb(6, 115, 228), rgb(20, 57, 182)); */
-  /* height: 90vh; */
-  /* clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%); */
   background-color: #EDEDED;
   padding-bottom: 4rem;
 }
@@ -41,6 +38,10 @@ button {
   position: fixed;
   width: 100%;
   z-index: 1;
+}
+
+#navOpen {
+  font-size: 16px;
 }
 
 .navbar a {
