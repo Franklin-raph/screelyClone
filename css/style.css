@@ -1455,6 +1455,10 @@ footer .contacts a div {
   .resetFilterBtn {
     max-width: 35%;
   }
+
+  #features .featuresContainer .feature i {
+    font-size: 48px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1548,6 +1552,10 @@ footer .contacts a div {
   .logo {
     font-size: 18px !important;
   }
+
+  #features .featuresContainer .feature i {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-width:480px) {
@@ -1600,6 +1608,11 @@ footer .contacts a div {
 
   #features .featuresContainer .feature i {
     padding: 9px;
+    font-size: 30px;
+  }
+
+  #features .featuresContainer .feature {
+    gap: 0;
   }
 
   #about .aboutDiv1,
