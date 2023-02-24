@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Webshot",
+    "description": "Generate Website Mockups Instantly Without Complicated Software",
+    "version": "1.0",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "./assets/figma.png"
+    },
+    "icons": {
+        "64": "./assets/figma.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}

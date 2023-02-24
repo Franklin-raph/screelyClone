@@ -395,9 +395,11 @@ imageDownloadButton.addEventListener("click", () => {
   html2canvas(document.querySelector(".imageFrame"), {
     allowTaint: true,
     useCORS: true,
+    scale: window.devicePixelRatio,
+    // transform: scale(2, 2)
   }).then(function (canvas) {
     let anchorTag = document.createElement("a");
-    anchorTag.download = "filename.png";
+    anchorTag.download = "webshot.png";
     anchorTag.href = canvas.toDataURL();
     anchorTag.target = "_blank";
     anchorTag.click();

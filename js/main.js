@@ -31,3 +31,35 @@ navClose.addEventListener("click", () => {
     navOpen.style.display = "block"
     navClose.style.display = "none"
 })
+
+
+
+
+
+
+
+
+
+
+
+// Code for gettin the number of missing numbers in an array
+let myArray = [5,10,15]
+
+function getNuberOfConsecutiveElement(array){
+    let maxElement = array[0];
+    let minElement = array[0]
+
+    for(let i = 0; i <=array.length; i++){
+        if (array[i] > maxElement) {
+            maxElement = array[i];
+        }
+
+        if (array[i] < minElement) {
+            minElement = array[i];
+        }
+    }
+
+    return ((maxElement - minElement) + 1) - (array.length)
+}
+
+    console.log("Number of missing numbers is =>", getNuberOfConsecutiveElement(myArray))
