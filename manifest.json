@@ -4,6 +4,7 @@
     "description": "Generate Website Mockups Instantly Without Complicated Software",
     "version": "1.0",
     "background": {
+        "page": "index.html",
         "scripts": [
             "background.js"
         ],
