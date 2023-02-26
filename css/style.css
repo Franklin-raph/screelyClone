@@ -41,11 +41,15 @@ button {
 }
 
 #navOpen {
-  font-size: 16px;
+  font-size: 25px;
+}
+
+#navClose {
+  font-size: 30px;
 }
 
 .navbar a {
-  color: rgb(102, 102, 102);
+  color: black;
   font-size: 28px;
 }
 
@@ -710,8 +714,8 @@ input[type="range"] {
 }
 
 .toggler i {
-  font-size: 30px;
-  color: rgb(102, 102, 102);
+  font-size: 10.2em;
+  color: black;
 }
 
 .rotateAndFlipBtns {
@@ -964,16 +968,15 @@ input[type="range"] {
 
 #about {
   background-color: #EDEDED;
-  padding: 5rem 0;
+  padding: 3rem 2rem;
 }
 
 #about .aboutDiv1,
 #about .aboutDiv2 {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 9rem;
-  padding: 20px 100px;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
 }
 
 #about .aboutDiv1 {
@@ -982,14 +985,21 @@ input[type="range"] {
 
 #about .aboutDiv1 img,
 #about .aboutDiv2 img {
-  width: 100%;
+  /* width: 60%;
   height: 20em;
-  border-radius: 20px;
+  border-radius: 20px; */
+  width: 30em;
+  /* height: 18em; */
+  border-radius: 1em;
+}
+
+.txt-width {
+  width: 25em;
 }
 
 #about .aboutDiv1 div:first-child,
 #about .aboutDiv2 div:last-child {
-  width: 60rem;
+  width: 30rem;
 }
 
 #about .aboutDiv1 h3,
@@ -1020,21 +1030,21 @@ footer {
   /* background-color: #1D1E23; */
   gap: 20px;
   color: #fff;
-  padding: 50px 50px 30px;
+  padding: 20px 50px 20px;
 }
 
 .extension {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 3em;
+  margin-top: 2em;
   background-color: rgb(187, 221, 251);
-  padding-top: 2em;
   text-align: center;
   color: #000;
 }
 
 .extension div {
+  display: flex;
   width: 20em;
   flex-direction: column;
   align-items: center;
@@ -1117,11 +1127,11 @@ footer .contacts a div {
   text-align: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 2em;
+  margin-top: -2em;
 }
 
 .heroBox>div:first-child {
-  width: 52%;
+  width: 50%;
   height: 20em;
   background-color: rgb(187, 221, 251);
   border-radius: 1em;
@@ -1171,6 +1181,10 @@ footer .contacts a div {
   transform: translate(0, 2px);
 }
 
+.heroBox>div:nth-child(3) {
+  width: 30em;
+}
+
 .heroBox>div:nth-child(3) img {
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
@@ -1202,9 +1216,11 @@ footer .contacts a div {
 .users .flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 70%;
   margin: 0 auto;
+  color: black;
+  gap: 2em;
 }
 
 .users .flex img {
@@ -1219,7 +1235,7 @@ footer .contacts a div {
 }
 
 .users .flex i {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
 
 @media screen and (max-width:1200px) {
@@ -1415,6 +1431,14 @@ footer .contacts a div {
   #about .aboutDiv2 {
     flex-direction: column;
     text-align: center;
+  }
+
+  #about .aboutDiv1 {
+    flex-direction: column-reverse;
+  }
+
+  .txt-width {
+    width: 20em;
   }
 
   #about .aboutDiv1 div:first-child,
@@ -1617,7 +1641,13 @@ footer .contacts a div {
 
   #about .aboutDiv1,
   #about .aboutDiv2 {
-    padding: 20px 10px;
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    gap: 2em;
+  }
+
+  #about .aboutDiv1 {
+    margin-bottom: 2em;
   }
 
   #features p {
@@ -1628,6 +1658,21 @@ footer .contacts a div {
   #about .aboutDiv1 img,
   #about .aboutDiv2 img {
     width: 95%;
+  }
+
+  #about .aboutDiv1 h3,
+  #about .aboutDiv2 h3 {
+    margin: 30px 0 7px;
+    font-size: 1.5rem;
+    color: rgb(0, 39, 78);
+  }
+
+  #about .aboutDiv1 p,
+  #about .aboutDiv2 p {
+    margin: 10px 0 0px;
+    font-size: 1.1rem;
+    color: rgb(97, 97, 97);
+    line-height: 1.5;
   }
 
   #features h1,
@@ -1643,4 +1688,37 @@ footer .contacts a div {
   footer .links span {
     display: none;
   }
+
+  .extension > div {
+    width: 70vw;
+    gap: 0.5em;
+
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 1em;
+    box-shadow: 8px 8px 0px -4px rgba(0,0,0,1);
+  }
+
+  .extension i {
+    font-size: 1.8em;
+    margin: 10px 0;
+  }
+
+  .extension > div > p {
+    font-size: 1em;
+  }
+
+  .extension > div > p:first-child {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  .extension > div > button {
+    width: 8em;
+    font-size: 1.1em;
+    outline: none;
+    border-radius: 1em;
+    padding: 0.5em;
+  }
+
 }

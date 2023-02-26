@@ -144,6 +144,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
     console.log(img.clientWidth)
   })
 
+
+  // Make the width of the image the same with the width of the blue background 
+  // Either parcel.js OR html2canvas.js
+
   // topBarWidth.oninput = function () {
   //   topBar.style.width = this.value + "px";
   //   document.querySelector(".topBarWidthSliderNum").textContent = this.value + "px";
