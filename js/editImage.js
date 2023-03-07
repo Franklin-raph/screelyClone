@@ -139,7 +139,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   const img = new Image();
   img.src = imgUrl;
-  topBar.style.width = `${img.Width}px !important`
+  topBar.offsetWidth = img.offsetWidth;
+  // topBar.style.width = `${img.Width}px !important`
   img.addEventListener('load', () => {
     console.log(img.clientWidth)
   })
