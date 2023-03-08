@@ -291,11 +291,11 @@ input[type="file"] {
 }
 
 .imageFrame .topBar {
-  width: 85%;
+  width: 100%;
 }
 
 .imageFrame img {
-  width: 85%;
+  width: 100%;
 }
 
 .left {
