@@ -1237,6 +1237,23 @@ footer .contacts a div {
   font-size: 2.5rem;
 }
 
+input[type='range'] {
+  width: 50%;
+  accent-color: #005DFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 6px;
+  -webkit-appearance: none;
+  height: 12px;
+  /* background: black; */
+  border-radius: 2px;
+}
+
+
 @media screen and (max-width:1200px) {
 
   html,
